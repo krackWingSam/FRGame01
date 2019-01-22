@@ -11,14 +11,65 @@
 @implementation FRTouchObject
 
 +(FRTouchObject *)touchObjectWithDimension:(CGPoint)dimension withViewSize:(CGSize)viewSize withLocation:(CGPoint)location {
+    BOOL isSelected = false;
     float cellWidth, cellHeight;
     cellWidth = viewSize.width / dimension.x;
     cellHeight = viewSize.height / dimension.y;
     
-    FRTouchObject *newObj = [[FRTouchObject alloc] initWithPoint:CGPointMake(location.x/cellWidth, location.y/cellHeight) withPosition:location];
+    if (location.x >= viewSize.width)
+        location.x = viewSize.width-1;
+    if (location.x <= 0)
+        location.x = 0;
     
-    return newObj;
+    if (location.y >= viewSize.height)
+        location.y = viewSize.height-1;
+    if (location.y <= 0)
+        location.y = 0;
+    
+    int cellX = floor(location.x/cellWidth);
+    int cellY = floor(location.y/cellHeight);
+    
+    float innerLocation_X = location.x - (cellWidth * cellX);
+    float innerLocation_Y = location.y - (cellHeight * cellY);
+    
+    if (innerLocation_X > cellWidth/2 && innerLocation_Y > cellHeight/2) {
+        // Quadrant 2
+        if (innerLocation_Y < -innerLocation_X + 93.75 )
+            isSelected = true;
+    }
+    else if (innerLocation_X < cellWidth/2 && innerLocation_Y > cellHeight/2) {
+        // Quadrant 3
+        if (innerLocation_Y < innerLocation_X + 31.25) {
+            isSelected = true;
+        }
+    }
+    else if (innerLocation_X < cellWidth/2 && innerLocation_Y < cellHeight/2) {
+        // Quadrant 4
+        if (innerLocation_Y > -innerLocation_X + 31.25 )
+            isSelected = true;
+    }
+    else {
+        // Quadrant 1
+        if (innerLocation_Y > innerLocation_X - 31.25)
+            isSelected = true;
+    }
+    
+    if (isSelected) {
+        CGPoint touchedPoint = CGPointMake(cellX, cellY);
+        FRTouchObject *newObj = [[FRTouchObject alloc] initWithPoint:touchedPoint withPosition:location];
+        
+        return newObj;
+    }
+    
+    return nil;
 }
+
+
+#pragma mark - Ovveriding
+-(NSString *)description {
+    return [[NSString alloc] initWithFormat:@"x : %ld, y : %ld", _x, _y ];
+}
+
 
 
 #pragma mark - public

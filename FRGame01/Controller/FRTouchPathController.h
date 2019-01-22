@@ -16,10 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 +(FRTouchPathController*)sharedController;
 
 -(void)setFirstTouch:(FRTouchObject *)touch;
--(void)addNextTouch:(FRTouchObject *)touch;
+-(BOOL)addNextTouch:(FRTouchObject *)touch;
+-(BOOL)setLastTouch:(FRTouchObject *)touch;
+-(void)cleanTouchsArray;
 
 
 @property (readonly) NSMutableArray *touchs;
+@property BOOL debug;
 
 @end
 

@@ -13,11 +13,12 @@
 		5FAB162021E313F2006ED932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAB161E21E313F2006ED932 /* LaunchScreen.storyboard */; };
 		5FAB162321E313F2006ED932 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB162221E313F2006ED932 /* main.m */; };
 		5FAB162C21E31437006ED932 /* FRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB162B21E31437006ED932 /* FRTestViewController.m */; };
-		5FAB163021E31718006ED932 /* FRInterfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB162F21E31718006ED932 /* FRInterfaceView.m */; };
+		5FAB163021E31718006ED932 /* FRBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB162F21E31718006ED932 /* FRBoardView.m */; };
 		5FAB163421E31823006ED932 /* FRTestInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163321E31823006ED932 /* FRTestInterfaceViewController.m */; };
 		5FAB163821E349F3006ED932 /* FRTouchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163721E349F3006ED932 /* FRTouchObject.m */; };
 		5FAB163C21E350C8006ED932 /* FRTouchPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163B21E350C8006ED932 /* FRTouchPathController.m */; };
 		5FAB163F21E35559006ED932 /* FRPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163E21E35559006ED932 /* FRPathView.m */; };
+		5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB164121E436E9006ED932 /* FRBoardPreference.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +32,8 @@
 		5FAB162221E313F2006ED932 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FAB162A21E31437006ED932 /* FRTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTestViewController.h; sourceTree = "<group>"; };
 		5FAB162B21E31437006ED932 /* FRTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTestViewController.m; sourceTree = "<group>"; };
-		5FAB162E21E31718006ED932 /* FRInterfaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRInterfaceView.h; sourceTree = "<group>"; };
-		5FAB162F21E31718006ED932 /* FRInterfaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRInterfaceView.m; sourceTree = "<group>"; };
+		5FAB162E21E31718006ED932 /* FRBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRBoardView.h; sourceTree = "<group>"; };
+		5FAB162F21E31718006ED932 /* FRBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRBoardView.m; sourceTree = "<group>"; };
 		5FAB163221E31823006ED932 /* FRTestInterfaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTestInterfaceViewController.h; sourceTree = "<group>"; };
 		5FAB163321E31823006ED932 /* FRTestInterfaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTestInterfaceViewController.m; sourceTree = "<group>"; };
 		5FAB163621E349F3006ED932 /* FRTouchObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTouchObject.h; sourceTree = "<group>"; };
@@ -41,6 +42,8 @@
 		5FAB163B21E350C8006ED932 /* FRTouchPathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTouchPathController.m; sourceTree = "<group>"; };
 		5FAB163D21E35559006ED932 /* FRPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPathView.h; sourceTree = "<group>"; };
 		5FAB163E21E35559006ED932 /* FRPathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPathView.m; sourceTree = "<group>"; };
+		5FAB164021E436E9006ED932 /* FRBoardPreference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRBoardPreference.h; sourceTree = "<group>"; };
+		5FAB164121E436E9006ED932 /* FRBoardPreference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRBoardPreference.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +102,8 @@
 		5FAB162D21E316FD006ED932 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5FAB162E21E31718006ED932 /* FRInterfaceView.h */,
-				5FAB162F21E31718006ED932 /* FRInterfaceView.m */,
+				5FAB162E21E31718006ED932 /* FRBoardView.h */,
+				5FAB162F21E31718006ED932 /* FRBoardView.m */,
 				5FAB163D21E35559006ED932 /* FRPathView.h */,
 				5FAB163E21E35559006ED932 /* FRPathView.m */,
 			);
@@ -123,6 +126,8 @@
 			children = (
 				5FAB163621E349F3006ED932 /* FRTouchObject.h */,
 				5FAB163721E349F3006ED932 /* FRTouchObject.m */,
+				5FAB164021E436E9006ED932 /* FRBoardPreference.h */,
+				5FAB164121E436E9006ED932 /* FRBoardPreference.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -206,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAB163021E31718006ED932 /* FRInterfaceView.m in Sources */,
+				5FAB163021E31718006ED932 /* FRBoardView.m in Sources */,
 				5FAB162C21E31437006ED932 /* FRTestViewController.m in Sources */,
 				5FAB163821E349F3006ED932 /* FRTouchObject.m in Sources */,
 				5FAB163C21E350C8006ED932 /* FRTouchPathController.m in Sources */,
@@ -214,6 +219,7 @@
 				5FAB162321E313F2006ED932 /* main.m in Sources */,
 				5FAB161521E313F1006ED932 /* AppDelegate.m in Sources */,
 				5FAB163F21E35559006ED932 /* FRPathView.m in Sources */,
+				5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXU23UYV46;
 				INFOPLIST_FILE = FRGame01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXU23UYV46;
 				INFOPLIST_FILE = FRGame01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

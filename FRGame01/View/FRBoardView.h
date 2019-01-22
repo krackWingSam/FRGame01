@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define FRINTERFACE_DEFAULT_DIMENSION 6
-
-@interface FRInterfaceView : UIView
+@interface FRBoardView : UIView
 
 -(void)initInterface;
 
