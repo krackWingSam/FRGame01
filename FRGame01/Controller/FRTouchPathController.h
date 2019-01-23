@@ -11,6 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol FRTouchPathControllerDelegate <NSObject>
+
+-(void)drawPathWithTouches:(NSArray *)touches withLastTouch:(FRTouchObject *)lastTouch;
+
+@end
+
+
+
 @interface FRTouchPathController : NSObject
 
 +(FRTouchPathController*)sharedController;
@@ -23,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSMutableArray *touchs;
 @property BOOL debug;
+
+@property id<FRTouchPathControllerDelegate> delegate;
 
 @end
 

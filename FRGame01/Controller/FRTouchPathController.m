@@ -10,6 +10,8 @@
 
 @interface FRTouchPathController () {
     NSMutableArray *array_Touches;
+    
+    FRTouchObject *currentTouch;
 }
 
 @end
@@ -35,10 +37,14 @@
 }
 
 -(BOOL)checkValidTouch:(FRTouchObject *)touch {
+    //TODO: check is same tile?
+    
     FRTouchObject *lastTouch = [array_Touches lastObject];
     
     // not side position
-    if (abs((int)lastTouch.x - (int)touch.x) + abs((int)lastTouch.y - (int)touch.y) > 2)
+    if (abs((int)lastTouch.x - (int)touch.x) > 1)
+        return NO;
+    if (abs((int)lastTouch.y - (int)touch.y) > 1)
         return NO;
     
     // same position with old object
@@ -68,6 +74,9 @@
 -(void)setFirstTouch:(FRTouchObject *)touch {
     [array_Touches removeAllObjects];
     
+    if (touch.x == -1 || touch.y == -1)
+        return;
+    
     if (_debug)
         NSLog(@"set first add : %@", touch);
         
@@ -75,6 +84,14 @@
 }
 
 -(BOOL)addNextTouch:(FRTouchObject *)touch {
+    currentTouch = touch;
+    
+    if (self.delegate)
+        [self.delegate drawPathWithTouches:array_Touches withLastTouch:currentTouch];
+    
+    if (touch.x == -1 || touch.y == -1)
+        return NO;
+    
     if ([self checkValidTouch:touch])
         [array_Touches addObject:touch];
     else if ([self checkRemovableTouch:touch])
