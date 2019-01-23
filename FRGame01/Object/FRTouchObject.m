@@ -54,14 +54,15 @@
             isSelected = true;
     }
     
-    if (isSelected) {
-        CGPoint touchedPoint = CGPointMake(cellX, cellY);
-        FRTouchObject *newObj = [[FRTouchObject alloc] initWithPoint:touchedPoint withPosition:location];
-        
-        return newObj;
-    }
+    CGPoint touchedPoint;
+    if (isSelected)
+        touchedPoint = CGPointMake(cellX, cellY);
+    else
+        touchedPoint = CGPointMake(-1, -1);
     
-    return nil;
+    FRTouchObject *newObj = [[FRTouchObject alloc] initWithPoint:touchedPoint withPosition:location];
+    
+    return newObj;
 }
 
 
