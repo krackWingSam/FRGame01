@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FRTouchPathController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FRPathView : UIView
+@interface FRPathView : UIView  <FRTouchPathControllerDelegate>
 
 @property BOOL debug;
 @property NSInteger dimension_X;
