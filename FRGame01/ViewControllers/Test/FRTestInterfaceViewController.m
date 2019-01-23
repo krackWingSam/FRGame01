@@ -58,6 +58,9 @@
     pathController = [FRTouchPathController sharedController];
     
     [self action_DoneEditProperties:nil];
+    
+    //set protocol
+    [[FRTouchPathController sharedController] setDelegate:view_Path];
 }
 
 /*
@@ -103,6 +106,7 @@
     
     [view_Interface setDebug:[switch_Debug isOn]];
     [view_Interface initInterface];
+    [view_Path initInterface];
     
     [view_Interface setNeedsDisplay];
     
