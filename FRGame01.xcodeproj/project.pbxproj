@@ -14,6 +14,8 @@
 		5F712E9E21F8412E00CF7BE2 /* t_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F712E9721F8412E00CF7BE2 /* t_7.png */; };
 		5F712E9F21F8412E00CF7BE2 /* t_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F712E9821F8412E00CF7BE2 /* t_5.png */; };
 		5F712EA021F8412E00CF7BE2 /* t_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F712E9921F8412E00CF7BE2 /* t_4.png */; };
+		5F712EA321FAA5B400CF7BE2 /* FRTileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F712EA221FAA5B400CF7BE2 /* FRTileController.m */; };
+		5F712EA621FABBF900CF7BE2 /* FRTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F712EA521FABBF900CF7BE2 /* FRTile.m */; };
 		5FAB161521E313F1006ED932 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB161421E313F1006ED932 /* AppDelegate.m */; };
 		5FAB161B21E313F1006ED932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAB161921E313F1006ED932 /* Main.storyboard */; };
 		5FAB161D21E313F2006ED932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAB161C21E313F2006ED932 /* Assets.xcassets */; };
@@ -24,7 +26,6 @@
 		5FAB163421E31823006ED932 /* FRTestInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163321E31823006ED932 /* FRTestInterfaceViewController.m */; };
 		5FAB163821E349F3006ED932 /* FRTouchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163721E349F3006ED932 /* FRTouchObject.m */; };
 		5FAB163C21E350C8006ED932 /* FRTouchPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163B21E350C8006ED932 /* FRTouchPathController.m */; };
-		5FAB163F21E35559006ED932 /* FRPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163E21E35559006ED932 /* FRPathView.m */; };
 		5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB164121E436E9006ED932 /* FRBoardPreference.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,10 @@
 		5F712E9721F8412E00CF7BE2 /* t_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_7.png; sourceTree = "<group>"; };
 		5F712E9821F8412E00CF7BE2 /* t_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_5.png; sourceTree = "<group>"; };
 		5F712E9921F8412E00CF7BE2 /* t_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_4.png; sourceTree = "<group>"; };
+		5F712EA121FAA5B400CF7BE2 /* FRTileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTileController.h; sourceTree = "<group>"; };
+		5F712EA221FAA5B400CF7BE2 /* FRTileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTileController.m; sourceTree = "<group>"; };
+		5F712EA421FABBF900CF7BE2 /* FRTile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTile.h; sourceTree = "<group>"; };
+		5F712EA521FABBF900CF7BE2 /* FRTile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTile.m; sourceTree = "<group>"; };
 		5FAB161021E313F1006ED932 /* FRGame01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRGame01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAB161321E313F1006ED932 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5FAB161421E313F1006ED932 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,8 +59,6 @@
 		5FAB163721E349F3006ED932 /* FRTouchObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTouchObject.m; sourceTree = "<group>"; };
 		5FAB163A21E350C8006ED932 /* FRTouchPathController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTouchPathController.h; sourceTree = "<group>"; };
 		5FAB163B21E350C8006ED932 /* FRTouchPathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTouchPathController.m; sourceTree = "<group>"; };
-		5FAB163D21E35559006ED932 /* FRPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPathView.h; sourceTree = "<group>"; };
-		5FAB163E21E35559006ED932 /* FRPathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPathView.m; sourceTree = "<group>"; };
 		5FAB164021E436E9006ED932 /* FRBoardPreference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRBoardPreference.h; sourceTree = "<group>"; };
 		5FAB164121E436E9006ED932 /* FRBoardPreference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRBoardPreference.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,8 +144,6 @@
 			children = (
 				5FAB162E21E31718006ED932 /* FRBoardView.h */,
 				5FAB162F21E31718006ED932 /* FRBoardView.m */,
-				5FAB163D21E35559006ED932 /* FRPathView.h */,
-				5FAB163E21E35559006ED932 /* FRPathView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +166,8 @@
 				5FAB163721E349F3006ED932 /* FRTouchObject.m */,
 				5FAB164021E436E9006ED932 /* FRBoardPreference.h */,
 				5FAB164121E436E9006ED932 /* FRBoardPreference.m */,
+				5F712EA421FABBF900CF7BE2 /* FRTile.h */,
+				5F712EA521FABBF900CF7BE2 /* FRTile.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -174,6 +177,8 @@
 			children = (
 				5FAB163A21E350C8006ED932 /* FRTouchPathController.h */,
 				5FAB163B21E350C8006ED932 /* FRTouchPathController.m */,
+				5F712EA121FAA5B400CF7BE2 /* FRTileController.h */,
+				5F712EA221FAA5B400CF7BE2 /* FRTileController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,9 +266,10 @@
 				5FAB163C21E350C8006ED932 /* FRTouchPathController.m in Sources */,
 				5FAB163421E31823006ED932 /* FRTestInterfaceViewController.m in Sources */,
 				5FAB162321E313F2006ED932 /* main.m in Sources */,
+				5F712EA621FABBF900CF7BE2 /* FRTile.m in Sources */,
 				5FAB161521E313F1006ED932 /* AppDelegate.m in Sources */,
-				5FAB163F21E35559006ED932 /* FRPathView.m in Sources */,
 				5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */,
+				5F712EA321FAA5B400CF7BE2 /* FRTileController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
