@@ -10,18 +10,15 @@
 #import "FRBoardPreference.h"
 #import "FRTouchPathController.h"
 #import "FRBoardView.h"
-#import "FRPathView.h"
 
 @interface FRTestInterfaceViewController () <UITextFieldDelegate> {
     IBOutlet FRBoardView *view_Interface;
-    IBOutlet FRPathView *view_Path;
     
     IBOutlet UIView *view_Option;
     IBOutlet UIScrollView *view_OptionScroll;
     IBOutlet UIView *view_Content;
     IBOutlet UITextField *tf_Dimension_X;
     IBOutlet UITextField *tf_Dimension_Y;
-    IBOutlet UISwitch *switch_ShowPathView;
     IBOutlet UISwitch *switch_ShowInteractionView;
     
     IBOutlet UISwitch *switch_Debug;
@@ -58,9 +55,6 @@
     pathController = [FRTouchPathController sharedController];
     
     [self action_DoneEditProperties:nil];
-    
-    //set protocol
-    [[FRTouchPathController sharedController] setDelegate:view_Path];
 }
 
 /*
@@ -106,14 +100,8 @@
     
     [view_Interface setDebug:[switch_Debug isOn]];
     [view_Interface initInterface];
-    [view_Path initInterface];
     
     [view_Interface setNeedsDisplay];
-    
-    if ([switch_ShowPathView isOn])
-        [view_Path setHidden:NO];
-    else
-        [view_Path setHidden:YES];
 
     if ([switch_ShowInteractionView isOn])
         [view_Interface setHidden:NO];

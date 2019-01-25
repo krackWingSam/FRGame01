@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)setLastTouch:(FRTouchObject *)touch;
 -(void)cleanTouchsArray;
 
-
+@property (readonly) FRTouchObject *currentTouch;
 @property (readonly) NSMutableArray *touchs;
 @property BOOL debug;
 

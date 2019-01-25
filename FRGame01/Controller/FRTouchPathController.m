@@ -10,8 +10,6 @@
 
 @interface FRTouchPathController () {
     NSMutableArray *array_Touches;
-    
-    FRTouchObject *currentTouch;
 }
 
 @end
@@ -84,10 +82,10 @@
 }
 
 -(BOOL)addNextTouch:(FRTouchObject *)touch {
-    currentTouch = touch;
+    _currentTouch = touch;
     
     if (self.delegate)
-        [self.delegate drawPathWithTouches:array_Touches withLastTouch:currentTouch];
+        [self.delegate drawPathWithTouches:array_Touches withLastTouch:_currentTouch];
     
     if (touch.x == -1 || touch.y == -1)
         return NO;
