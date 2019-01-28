@@ -8,6 +8,15 @@
 
 #import "FRBoardPreference.h"
 
+
+@interface FRBoardPreference () {
+    CGRect windowFrame;
+}
+
+@end
+
+
+
 @implementation FRBoardPreference
 
 +(FRBoardPreference*)sharedPreference {
@@ -19,13 +28,23 @@
     return sharedPreference;
 }
 
+-(id)init {
+    if (self = [super init]) {
+        windowFrame = [[UIScreen mainScreen] bounds];
+    }
+    return self;
+}
+
 -(void)setDimensionX:(NSUInteger)dimensionX {
     _dimensionX = dimensionX;
-    //TODO: set cellWidth or cellHeight using window size
+    
+    _cellWidth = windowFrame.size.width / dimensionX;
 }
 
 -(void)setDimensionY:(NSUInteger)dimensionY {
     _dimensionY = dimensionY;
+    
+    _cellHeight = windowFrame.size.height / dimensionY;
 }
 
 @end
