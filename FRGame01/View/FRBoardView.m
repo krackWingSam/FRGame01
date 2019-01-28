@@ -9,11 +9,13 @@
 #import "FRBoardView.h"
 #import "FRBoardPreference.h"
 #import "FRTouchPathController.h"
+#import "FRTileController.h"
 
 
 @interface FRBoardView () {
     FRBoardPreference *boardPreference;
     FRTouchPathController *pathController;
+    FRTileController *tileController;
     
     NSArray *touches;
     FRTouchObject *lastTouch;
@@ -31,6 +33,9 @@
 -(void)initInterface {
     pathController = [FRTouchPathController sharedController];
     boardPreference = [FRBoardPreference sharedPreference];
+    tileController = [FRTileController sharedController];
+    
+    [tileController initTileMap];
     
     _dimension_X = boardPreference.dimensionX;
     _dimension_Y = boardPreference.dimensionY;
@@ -145,6 +150,9 @@
     
     if (lastTouch)
         [pathController setLastTouch:lastTouch];
+    
+    
+    //TODO: add action for finished input
     
     [self setNeedsDisplay];
 }

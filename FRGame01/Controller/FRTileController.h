@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(FRTileController*)sharedController;
 
+-(void)initTileMap;
+
 @end
 
 NS_ASSUME_NONNULL_END
