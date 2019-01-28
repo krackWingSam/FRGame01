@@ -10,4 +10,11 @@
 
 @implementation FRTile
 
+-(id)initWithType:(FRTileType)type {
+    if (self = [super init]) {
+        _type = type;
+    }
+    return self;
+}
+
 @end

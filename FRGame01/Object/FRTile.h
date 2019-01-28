@@ -10,7 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    FRTileType_1 = 1,
+    FRTileType_2,
+    FRTileType_3,
+    FRTileType_4,
+    FRTileType_5,
+    FRTileType_6,
+    FRTileType_7,
+} FRTileType;
+
 @interface FRTile : NSObject
+
+@property (readonly) NSUInteger tileID;
+@property (readonly) FRTileType type;
 
 @end
 
