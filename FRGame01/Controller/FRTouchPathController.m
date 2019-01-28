@@ -35,7 +35,7 @@
 }
 
 -(BOOL)checkValidTouch:(FRTouchObject *)touch {
-    //TODO: check is same tile?
+    //TODO: check is same type tile?
     
     FRTouchObject *lastTouch = [array_Touches lastObject];
     
