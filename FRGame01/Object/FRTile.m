@@ -8,11 +8,19 @@
 
 #import "FRTile.h"
 
+static NSUInteger tileID;
+
 @implementation FRTile
+
++(FRTile*)getRandomTile {
+    FRTileType randomType = (arc4random() % 7) + 1;
+    return [[FRTile alloc] initWithType:randomType];
+}
 
 -(id)initWithType:(FRTileType)type {
     if (self = [super init]) {
         _type = type;
+        _tileID = tileID++;
     }
     return self;
 }

@@ -22,6 +22,8 @@ typedef enum : NSUInteger {
 
 @interface FRTile : NSObject
 
++(FRTile*)getRandomTile;
+
 @property (readonly) NSUInteger tileID;
 @property (readonly) FRTileType type;
 
