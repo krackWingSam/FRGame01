@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FRTile.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FRTileController : NSObject
 
-+(FRTileController*)sharedController;
++(FRTileController *)sharedController;
 
 -(void)initTileMap;
+-(FRTile *)getTilewithX:(NSUInteger)x withY:(NSUInteger)y;
 
 @end
 

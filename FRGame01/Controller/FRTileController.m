@@ -8,10 +8,9 @@
 
 #import "FRTileController.h"
 #import "FRBoardPreference.h"
-#import "FRTile.h"
 
 @interface FRTileController () {
-    NSMutableArray *tileArray;
+    NSArray *tileArray;
     NSUInteger dimensionX, dimensionY;
 }
 
@@ -40,15 +39,29 @@
     dimensionX = [[FRBoardPreference sharedPreference] dimensionX];
     dimensionY = [[FRBoardPreference sharedPreference] dimensionY];
     
-    tileArray = [[NSMutableArray alloc] initWithCapacity:dimensionX];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:dimensionX];
     for (int i=0 ; i<dimensionY ; i++) {
         NSMutableArray *xArray = [[NSMutableArray alloc] initWithCapacity:dimensionY];
-        [tileArray addObject:xArray];
+        [tempArray addObject:xArray];
     }
+    
+    tileArray = [[NSArray alloc] initWithArray:tempArray];
+    
+    [self fillTileMap];
 }
 
 -(void)fillTileMap {
-    
+    for (int x=0 ; x<dimensionY ; x++) {
+        NSMutableArray *xArray = tileArray[x];
+        for (int y=0 ; y<dimensionX ; y++) {
+            if (xArray[y] == nil)
+                [xArray addObject:[FRTile getRandomTile]];
+        }
+    }
+}
+
+-(FRTile *)getTilewithX:(NSUInteger)x withY:(NSUInteger)y {
+    return tileArray[x][y];
 }
 
 @end
