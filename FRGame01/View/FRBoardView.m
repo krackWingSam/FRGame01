@@ -50,8 +50,7 @@
 }
 
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+#pragma mark - Drawing
 - (void)drawRect:(CGRect)rect {
     // Drawing Path
     [self getTouches];
@@ -127,6 +126,13 @@
     }
 }
 
+-(void)drawTiles {
+    
+}
+
+
+
+#pragma mark - Touches
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     FRTouchObject *firstTouch = [FRTouchObject touchObjectWithDimension:CGPointMake(_dimension_X, _dimension_Y) withViewSize:self.frame.size withLocation:[[touches anyObject] locationInView:self]];
     
