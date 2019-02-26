@@ -7,6 +7,7 @@
 //
 
 #import "FRTile.h"
+#import "FRTileImageController.h"
 
 static NSUInteger tileID;
 
@@ -23,6 +24,12 @@ static NSUInteger tileID;
         _tileID = tileID++;
     }
     return self;
+}
+
+-(UIImage *)getImage {
+    FRTileImageController *controller = [FRTileImageController sharedController];
+    NSString *key = [controller getKeyWithIndex:_type];
+    return [controller getImageWithKey:key];
 }
 
 @end

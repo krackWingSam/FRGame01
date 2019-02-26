@@ -27,7 +27,7 @@
 		5FAB163821E349F3006ED932 /* FRTouchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163721E349F3006ED932 /* FRTouchObject.m */; };
 		5FAB163C21E350C8006ED932 /* FRTouchPathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB163B21E350C8006ED932 /* FRTouchPathController.m */; };
 		5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAB164121E436E9006ED932 /* FRBoardPreference.m */; };
-		89547EF22223ED9100143E1B /* TileImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89547EF12223ED9100143E1B /* TileImageController.m */; };
+		89547EF22223ED9100143E1B /* FRTileImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89547EF12223ED9100143E1B /* FRTileImageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +62,8 @@
 		5FAB163B21E350C8006ED932 /* FRTouchPathController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTouchPathController.m; sourceTree = "<group>"; };
 		5FAB164021E436E9006ED932 /* FRBoardPreference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRBoardPreference.h; sourceTree = "<group>"; };
 		5FAB164121E436E9006ED932 /* FRBoardPreference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRBoardPreference.m; sourceTree = "<group>"; };
-		89547EF02223ED9100143E1B /* TileImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileImageController.h; sourceTree = "<group>"; };
-		89547EF12223ED9100143E1B /* TileImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileImageController.m; sourceTree = "<group>"; };
+		89547EF02223ED9100143E1B /* FRTileImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRTileImageController.h; sourceTree = "<group>"; };
+		89547EF12223ED9100143E1B /* FRTileImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTileImageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +190,8 @@
 		89547EEF2223ED7700143E1B /* ResourceController */ = {
 			isa = PBXGroup;
 			children = (
-				89547EF02223ED9100143E1B /* TileImageController.h */,
-				89547EF12223ED9100143E1B /* TileImageController.m */,
+				89547EF02223ED9100143E1B /* FRTileImageController.h */,
+				89547EF12223ED9100143E1B /* FRTileImageController.m */,
 			);
 			path = ResourceController;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				5FAB162321E313F2006ED932 /* main.m in Sources */,
 				5F712EA621FABBF900CF7BE2 /* FRTile.m in Sources */,
 				5FAB161521E313F1006ED932 /* AppDelegate.m in Sources */,
-				89547EF22223ED9100143E1B /* TileImageController.m in Sources */,
+				89547EF22223ED9100143E1B /* FRTileImageController.m in Sources */,
 				5FAB164221E436E9006ED932 /* FRBoardPreference.m in Sources */,
 				5F712EA321FAA5B400CF7BE2 /* FRTileController.m in Sources */,
 			);

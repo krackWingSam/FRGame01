@@ -20,10 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface TileImageController : NSObject
+@interface FRTileImageController : NSObject
 
-+(TileImageController *)sharedController;
++(FRTileImageController *)sharedController;
 
+-(NSString *)getKeyWithIndex:(NSUInteger)index;
 -(UIImage *)getImageWithKey:(NSString *)key;
 
 @end

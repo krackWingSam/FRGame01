@@ -127,7 +127,12 @@
 }
 
 -(void)drawTiles {
-    
+    for (int x=0 ; x<_dimension_Y ; x++) {
+        for (int y=0 ; y<_dimension_X ; y++) {
+            FRTile *tile = [tileController getTilewithX:x withY:y];
+            
+        }
+    }
 }
 
 

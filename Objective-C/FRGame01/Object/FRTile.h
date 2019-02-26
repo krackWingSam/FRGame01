@@ -6,7 +6,7 @@
 //  Copyright © 2019 Fermata. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +23,7 @@ typedef enum : NSUInteger {
 @interface FRTile : NSObject
 
 +(FRTile*)getRandomTile;
+-(UIImage *)getImage;
 
 @property (readonly) NSUInteger tileID;
 @property (readonly) FRTileType type;
