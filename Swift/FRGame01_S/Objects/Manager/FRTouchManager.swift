@@ -1,5 +1,5 @@
 //
-//  FRTouchController.swift
+//  FRTouchManager.swift
 //  FRGame01_S
 //
 //  Created by 강상우 on 26/02/2019.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FRTouchController: NSObject {
+class FRTouchManager: NSObject {
     
-    static let shared: FRTouchController = FRTouchController()
+    static let shared: FRTouchManager = FRTouchManager()
     
     var array_Touches: Array<FRTouch> = []
     var currentTouch: FRTouch!

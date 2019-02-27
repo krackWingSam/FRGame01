@@ -10,14 +10,18 @@ import UIKit
 
 class FRTouchInteractionView: UIView {
     
-    var dimensionX      : UInt      = 7
-    var dimensionY      : UInt      = 7
+    var dimensionX      : UInt      = 0
+    var dimensionY      : UInt      = 0
     var cellWidth       : CGFloat   = 0
     var cellHeight      : CGFloat   = 0
     
 
     func initInterfaceParam() {
+        dimensionX = FRPreference.shared.axisX
+        dimensionY = FRPreference.shared.axisY
         
+        cellWidth = FRPreference.shared.cellWidth
+        cellHeight = FRPreference.shared.cellHeight
     }
     
     
@@ -33,9 +37,6 @@ class FRTouchInteractionView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        cellWidth = self.frame.size.width / CGFloat(dimensionX)
-        cellHeight = self.frame.size.height / CGFloat(dimensionY)
-        
         drawTouchs()
         if FRPreference.shared.isDebug {
             self.drawGrid()
@@ -43,10 +44,8 @@ class FRTouchInteractionView: UIView {
     }
     
     private func drawTouchs() {
-        let touches = FRTouchController.shared.array_Touches
-        let lastTouch = FRTouchController.shared.currentTouch
-        
-        if lastTouch == nil {
+        let touches = FRTouchManager.shared.array_Touches
+        guard let lastTouch = FRTouchManager.shared.currentTouch else {
             return
         }
         
@@ -56,14 +55,14 @@ class FRTouchInteractionView: UIView {
             UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5).set()
             
             let startTouch = touches[0]
-            path.move(to: CGPoint(x: CGFloat(startTouch.x) * cellWidth + cellWidth/2, y: CGFloat(startTouch.y) * cellHeight + cellHeight/2))
+            path.move(to: CGPoint(x: startTouch.x.floatValue * cellWidth + cellWidth/2, y: startTouch.y.floatValue * cellHeight + cellHeight/2))
             
             for i in 1..<touches.count {
                 let targetTouch = touches[i]
-                path.addLine(to: CGPoint(x: CGFloat(targetTouch.x) * cellWidth + cellWidth/2, y: CGFloat(targetTouch.y) * cellHeight + cellHeight/2))
+                path.addLine(to: CGPoint(x: targetTouch.x.floatValue * cellWidth + cellWidth/2, y: targetTouch.y.floatValue * cellHeight + cellHeight/2))
             }
             
-            path.addLine(to: CGPoint(x: (lastTouch?.position.x)!, y: (lastTouch?.position.y)!))
+            path.addLine(to: CGPoint(x: lastTouch.position.x, y: lastTouch.position.y))
             path.stroke()
         }
     }
@@ -128,7 +127,7 @@ class FRTouchInteractionView: UIView {
         let firstTouch: FRTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if firstTouch.x > 0 {
-            FRTouchController.shared.setFirstTouch(touch: firstTouch)
+            FRTouchManager.shared.setFirstTouch(touch: firstTouch)
         }
         
         self.setNeedsDisplay()
@@ -140,7 +139,7 @@ class FRTouchInteractionView: UIView {
         let nextTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if nextTouch.x > 0 {
-            _ = FRTouchController.shared.addNextTouch(touch: nextTouch)
+            _ = FRTouchManager.shared.addNextTouch(touch: nextTouch)
         }
         
         self.setNeedsDisplay()
@@ -152,8 +151,10 @@ class FRTouchInteractionView: UIView {
         let lastTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if lastTouch.x > 0 {
-            _ = FRTouchController.shared.setLastTouch(touch: lastTouch)
+            _ = FRTouchManager.shared.setLastTouch(touch: lastTouch)
         }
+        
+        // TODO: do somthing after Finished Dragging
         
         self.setNeedsDisplay()
     }

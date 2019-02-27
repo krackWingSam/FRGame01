@@ -14,34 +14,36 @@ class FRPreference: NSObject {
     
     // MARK: - variables
     var isDebug     : Bool      = true
-    var axisX       : UInt      = 1 {
-        didSet {
-            let frame:CGRect = (UIApplication.shared.delegate?.window!!.screen.bounds)!
-            cellWidth = frame.size.width / CGFloat(axisX)
-        }
-    }
+    var axisX       : UInt      = 7
     
-    var axisY       : UInt      = 1 {
-        didSet {
-            let frame:CGRect = (UIApplication.shared.delegate?.window!!.screen.bounds)!
-            cellHeight = frame.size.width / CGFloat(axisY)
+    var axisY       : UInt      = 7
+    var cellWidth   : CGFloat       {
+        get {
+            return UIScreen.main.bounds.size.width / axisX.floatValue
         }
     }
-    var cellWidth   : CGFloat   = 0
-    var cellHeight  : CGFloat   = 0
+    var cellHeight  : CGFloat       {
+        get {
+            return UIScreen.main.bounds.size.width / axisY.floatValue
+        }
+    }
     
     // MARK: - initialize
     override private init() {
         super.init()
-        print("FRPreference class initialize")
-        print(self)
+        
+        if isDebug {
+            print("FRPreference class initialize")
+            print(self)
+        }
     }
     
     override var description: String {
         get {
             let properties = self.propertyDic()
+            let descriptionString = "\tFRPreference\n" + properties.description
             
-            return properties.description
+            return descriptionString
         }
     }
 }

@@ -19,8 +19,8 @@ class FRTouch: NSObject {
         let cellX: Int = Int(floor(location.x/cellWidth));
         let cellY: Int = Int(floor(location.y/cellHeight));
         
-        let innerLocation_X: CGFloat = location.x - (cellWidth * CGFloat(cellX));
-        let innerLocation_Y: CGFloat = location.y - (cellHeight * CGFloat(cellY));
+        let innerLocation_X: CGFloat = location.x - (cellWidth * cellX.floatValue);
+        let innerLocation_Y: CGFloat = location.y - (cellHeight * cellY.floatValue);
         
         var isSelected = false
         

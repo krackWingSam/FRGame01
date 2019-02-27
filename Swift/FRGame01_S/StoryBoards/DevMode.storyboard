@@ -38,13 +38,26 @@
                                     <segue destination="rh9-Fe-IoH" kind="show" id="IWl-He-2ot"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-Dc-BuM">
+                                <rect key="frame" x="0.0" y="234" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SlJ-xD-2yi"/>
+                                </constraints>
+                                <state key="normal" title="FRBoardView Test"/>
+                                <connections>
+                                    <segue destination="CA3-Zg-kaZ" kind="show" id="VPv-TD-eVp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="icD-Zs-gx9" firstAttribute="trailing" secondItem="w1C-YT-CdP" secondAttribute="trailing" id="1tU-Rq-KWo"/>
+                            <constraint firstItem="icD-Zs-gx9" firstAttribute="trailing" secondItem="xyU-Dc-BuM" secondAttribute="trailing" id="7fh-Po-RBU"/>
                             <constraint firstItem="yGh-GA-Z9B" firstAttribute="leading" secondItem="icD-Zs-gx9" secondAttribute="leading" id="Cy1-0G-AvY"/>
+                            <constraint firstItem="xyU-Dc-BuM" firstAttribute="leading" secondItem="icD-Zs-gx9" secondAttribute="leading" id="EGT-EX-q3R"/>
                             <constraint firstItem="icD-Zs-gx9" firstAttribute="trailing" secondItem="yGh-GA-Z9B" secondAttribute="trailing" id="Hl1-XB-o6X"/>
                             <constraint firstItem="w1C-YT-CdP" firstAttribute="top" secondItem="icD-Zs-gx9" secondAttribute="top" constant="30" id="OGx-Wc-CwS"/>
+                            <constraint firstItem="xyU-Dc-BuM" firstAttribute="top" secondItem="yGh-GA-Z9B" secondAttribute="bottom" constant="30" id="OXh-yB-urQ"/>
                             <constraint firstItem="yGh-GA-Z9B" firstAttribute="top" secondItem="w1C-YT-CdP" secondAttribute="bottom" constant="30" id="jIf-54-axd"/>
                             <constraint firstItem="w1C-YT-CdP" firstAttribute="leading" secondItem="icD-Zs-gx9" secondAttribute="leading" id="qRD-yE-e6C"/>
                         </constraints>
@@ -66,7 +79,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnV-gI-c0E" customClass="FRTouchInteractionView" customModule="FRGame01_S" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DnV-gI-c0E" secondAttribute="height" id="ndH-g4-752"/>
                                 </constraints>
@@ -84,6 +97,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Cb-60-dc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="-107"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5wK-c7-xfu">
+            <objects>
+                <viewController id="CA3-Zg-kaZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPu-9x-WNp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dQe-4w-shG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rd-8I-AHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="565"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gAa-ay-ZnD">
