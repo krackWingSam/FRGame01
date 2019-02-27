@@ -14,13 +14,25 @@
 		8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6652224FAD9002310D1 /* DevMode.storyboard */; };
 		8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */; };
 		8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B66A2224FC78002310D1 /* FRPreference.swift */; };
-		8955B66E2225034A002310D1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B66D2225034A002310D1 /* NSObjectExtension.swift */; };
 		89842A2622251D7900DE70CB /* FRTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2522251D7900DE70CB /* FRTouch.swift */; };
 		89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2822253C3300DE70CB /* FRTouchManager.swift */; };
 		89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2A222613C200DE70CB /* FRBoardView.swift */; };
 		89842A2D2226170D00DE70CB /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2C2226170D00DE70CB /* UIntExtension.swift */; };
 		89842A2F2226184A00DE70CB /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2E2226184A00DE70CB /* IntExtension.swift */; };
 		89842A3122261AA500DE70CB /* FRImageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A3022261AA500DE70CB /* FRImageViewManager.swift */; };
+		89842A3522262A4400DE70CB /* FRTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A3422262A4400DE70CB /* FRTile.swift */; };
+		89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A3622262A5500DE70CB /* FRTileManager.swift */; };
+		89842A4822262FA900DE70CB /* FRImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A4722262FA900DE70CB /* FRImageManager.swift */; };
+		89842A5222262FE200DE70CB /* t_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A4B22262FE200DE70CB /* t_1.png */; };
+		89842A5322262FE200DE70CB /* t_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A4C22262FE200DE70CB /* t_3.png */; };
+		89842A5422262FE200DE70CB /* t_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A4D22262FE200DE70CB /* t_2.png */; };
+		89842A5522262FE200DE70CB /* t_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A4E22262FE200DE70CB /* t_6.png */; };
+		89842A5622262FE200DE70CB /* t_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A4F22262FE200DE70CB /* t_7.png */; };
+		89842A5722262FE200DE70CB /* t_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5022262FE200DE70CB /* t_5.png */; };
+		89842A5822262FE200DE70CB /* t_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5122262FE200DE70CB /* t_4.png */; };
+		89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A5C22265F8300DE70CB /* devFRTileViewController.swift */; };
+		89842A622226696C00DE70CB /* FRDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A612226696C00DE70CB /* FRDescription.swift */; };
+		89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A6322266DF300DE70CB /* NSObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +45,25 @@
 		8955B6652224FAD9002310D1 /* DevMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevMode.storyboard; sourceTree = "<group>"; };
 		8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchInteractionView.swift; sourceTree = "<group>"; };
 		8955B66A2224FC78002310D1 /* FRPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPreference.swift; sourceTree = "<group>"; };
-		8955B66D2225034A002310D1 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		89842A2522251D7900DE70CB /* FRTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouch.swift; sourceTree = "<group>"; };
 		89842A2822253C3300DE70CB /* FRTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchManager.swift; sourceTree = "<group>"; };
 		89842A2A222613C200DE70CB /* FRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRBoardView.swift; sourceTree = "<group>"; };
 		89842A2C2226170D00DE70CB /* UIntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIntExtension.swift; sourceTree = "<group>"; };
 		89842A2E2226184A00DE70CB /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		89842A3022261AA500DE70CB /* FRImageViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRImageViewManager.swift; sourceTree = "<group>"; };
+		89842A3422262A4400DE70CB /* FRTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTile.swift; sourceTree = "<group>"; };
+		89842A3622262A5500DE70CB /* FRTileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileManager.swift; sourceTree = "<group>"; };
+		89842A4722262FA900DE70CB /* FRImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRImageManager.swift; sourceTree = "<group>"; };
+		89842A4B22262FE200DE70CB /* t_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_1.png; sourceTree = "<group>"; };
+		89842A4C22262FE200DE70CB /* t_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_3.png; sourceTree = "<group>"; };
+		89842A4D22262FE200DE70CB /* t_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_2.png; sourceTree = "<group>"; };
+		89842A4E22262FE200DE70CB /* t_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_6.png; sourceTree = "<group>"; };
+		89842A4F22262FE200DE70CB /* t_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_7.png; sourceTree = "<group>"; };
+		89842A5022262FE200DE70CB /* t_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_5.png; sourceTree = "<group>"; };
+		89842A5122262FE200DE70CB /* t_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_4.png; sourceTree = "<group>"; };
+		89842A5C22265F8300DE70CB /* devFRTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devFRTileViewController.swift; sourceTree = "<group>"; };
+		89842A612226696C00DE70CB /* FRDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRDescription.swift; sourceTree = "<group>"; };
+		89842A6322266DF300DE70CB /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +120,7 @@
 		8955B6622224FA8E002310D1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				89842A5B22265F6700DE70CB /* DevModeViewControllers */,
 				8955B6672224FB25002310D1 /* Views */,
 			);
 			path = ViewControllers;
@@ -104,10 +129,12 @@
 		8955B6632224FA95002310D1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				89842A3422262A4400DE70CB /* FRTile.swift */,
 				8955B66A2224FC78002310D1 /* FRPreference.swift */,
 				89842A2522251D7900DE70CB /* FRTouch.swift */,
 				89842A2722253C0500DE70CB /* Manager */,
 				8955B66C2225033A002310D1 /* Extensions */,
+				89842A5E2226692D00DE70CB /* Protocols */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -115,6 +142,7 @@
 		8955B6642224FAA4002310D1 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				89842A4922262FE200DE70CB /* Images */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -131,9 +159,9 @@
 		8955B66C2225033A002310D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8955B66D2225034A002310D1 /* NSObjectExtension.swift */,
 				89842A2C2226170D00DE70CB /* UIntExtension.swift */,
 				89842A2E2226184A00DE70CB /* IntExtension.swift */,
+				89842A6322266DF300DE70CB /* NSObjectExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,8 +171,49 @@
 			children = (
 				89842A2822253C3300DE70CB /* FRTouchManager.swift */,
 				89842A3022261AA500DE70CB /* FRImageViewManager.swift */,
+				89842A3622262A5500DE70CB /* FRTileManager.swift */,
+				89842A4722262FA900DE70CB /* FRImageManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		89842A4922262FE200DE70CB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				89842A4A22262FE200DE70CB /* testing tiles */,
+			);
+			name = Images;
+			path = FRGame01_S/Images;
+			sourceTree = SOURCE_ROOT;
+		};
+		89842A4A22262FE200DE70CB /* testing tiles */ = {
+			isa = PBXGroup;
+			children = (
+				89842A4B22262FE200DE70CB /* t_1.png */,
+				89842A4C22262FE200DE70CB /* t_3.png */,
+				89842A4D22262FE200DE70CB /* t_2.png */,
+				89842A4E22262FE200DE70CB /* t_6.png */,
+				89842A4F22262FE200DE70CB /* t_7.png */,
+				89842A5022262FE200DE70CB /* t_5.png */,
+				89842A5122262FE200DE70CB /* t_4.png */,
+			);
+			path = "testing tiles";
+			sourceTree = "<group>";
+		};
+		89842A5B22265F6700DE70CB /* DevModeViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				89842A5C22265F8300DE70CB /* devFRTileViewController.swift */,
+			);
+			path = DevModeViewControllers;
+			sourceTree = "<group>";
+		};
+		89842A5E2226692D00DE70CB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				89842A612226696C00DE70CB /* FRDescription.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +274,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89842A5622262FE200DE70CB /* t_7.png in Resources */,
+				89842A5322262FE200DE70CB /* t_3.png in Resources */,
 				8955B65A2224FA67002310D1 /* LaunchScreen.storyboard in Resources */,
 				8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */,
+				89842A5722262FE200DE70CB /* t_5.png in Resources */,
+				89842A5822262FE200DE70CB /* t_4.png in Resources */,
+				89842A5522262FE200DE70CB /* t_6.png in Resources */,
 				8955B6572224FA67002310D1 /* Assets.xcassets in Resources */,
+				89842A5222262FE200DE70CB /* t_1.png in Resources */,
 				8955B6552224FA66002310D1 /* Main.storyboard in Resources */,
+				89842A5422262FE200DE70CB /* t_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,16 +295,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89842A4822262FA900DE70CB /* FRImageManager.swift in Sources */,
+				89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */,
 				89842A3122261AA500DE70CB /* FRImageViewManager.swift in Sources */,
 				8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */,
 				89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */,
+				89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */,
 				89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */,
 				89842A2D2226170D00DE70CB /* UIntExtension.swift in Sources */,
 				8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */,
+				89842A3522262A4400DE70CB /* FRTile.swift in Sources */,
 				89842A2F2226184A00DE70CB /* IntExtension.swift in Sources */,
+				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,
-				8955B66E2225034A002310D1 /* NSObjectExtension.swift in Sources */,
+				89842A622226696C00DE70CB /* FRDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,15 +8,16 @@
 
 import UIKit
 
-class FRPreference: NSObject {
+class FRPreference: NSObject, FRDescription {
     // MARK: -
     static let shared = FRPreference()
     
     // MARK: - variables
     var isDebug     : Bool      = true
     var axisX       : UInt      = 7
-    
     var axisY       : UInt      = 7
+    var testing     : Bool      = true
+    
     var cellWidth   : CGFloat       {
         get {
             return UIScreen.main.bounds.size.width / axisX.floatValue
@@ -34,16 +35,7 @@ class FRPreference: NSObject {
         
         if isDebug {
             print("FRPreference class initialize")
-            print(self)
-        }
-    }
-    
-    override var description: String {
-        get {
-            let properties = self.propertyDic()
-            let descriptionString = "\tFRPreference\n" + properties.description
-            
-            return descriptionString
+            print(self.description)
         }
     }
 }

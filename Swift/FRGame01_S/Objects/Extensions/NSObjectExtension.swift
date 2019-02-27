@@ -2,11 +2,11 @@
 //  NSObjectExtension.swift
 //  FRGame01_S
 //
-//  Created by 강상우 on 26/02/2019.
+//  Created by 강상우 on 27/02/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension NSObject {
     func propertyDic() -> [String: Any] {
@@ -21,4 +21,13 @@ extension NSObject {
         return dictionary
     }
     
+    override var description: String {
+        get {
+            print("testing print description")
+            let properties = self.propertyDic()
+            let descriptionString = "\tFRPreference\n" + properties.description
+            
+            return descriptionString
+        }
+    }
 }
