@@ -95,8 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				8955B64F2224FA66002310D1 /* AppDelegate.swift */,
+				8955B66C2225033A002310D1 /* Extensions */,
+				89842A2722253C0500DE70CB /* Manager */,
 				8955B6632224FA95002310D1 /* Objects */,
 				8955B6622224FA8E002310D1 /* ViewControllers */,
+				8955B6672224FB25002310D1 /* Views */,
 				8955B6612224FA87002310D1 /* StoryBoards */,
 				8955B6642224FAA4002310D1 /* Supports */,
 				8955B6562224FA67002310D1 /* Assets.xcassets */,
@@ -119,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				89842A5B22265F6700DE70CB /* DevModeViewControllers */,
-				8955B6672224FB25002310D1 /* Views */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,9 +132,6 @@
 				89842A3422262A4400DE70CB /* FRTile.swift */,
 				8955B66A2224FC78002310D1 /* FRPreference.swift */,
 				89842A2522251D7900DE70CB /* FRTouch.swift */,
-				89842A2722253C0500DE70CB /* Manager */,
-				8955B66C2225033A002310D1 /* Extensions */,
-				89842A5E2226692D00DE70CB /* Protocols */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -204,13 +203,6 @@
 				89842A5C22265F8300DE70CB /* devFRTileViewController.swift */,
 			);
 			path = DevModeViewControllers;
-			sourceTree = "<group>";
-		};
-		89842A5E2226692D00DE70CB /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

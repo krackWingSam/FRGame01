@@ -133,7 +133,22 @@
                     <view key="view" contentMode="scaleToFill" id="kPu-9x-WNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wf-Yh-kOZ" customClass="FRBoardView" customModule="FRGame01_S" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9wf-Yh-kOZ" secondAttribute="height" id="HKR-hD-gj7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9wf-Yh-kOZ" firstAttribute="leading" secondItem="dQe-4w-shG" secondAttribute="leading" id="0vM-cv-yff"/>
+                            <constraint firstItem="dQe-4w-shG" firstAttribute="trailing" secondItem="9wf-Yh-kOZ" secondAttribute="trailing" id="S7o-kn-GzC"/>
+                            <constraint firstItem="9wf-Yh-kOZ" firstAttribute="centerY" secondItem="kPu-9x-WNp" secondAttribute="centerY" id="mhr-FO-4pH"/>
+                            <constraint firstItem="9wf-Yh-kOZ" firstAttribute="centerX" secondItem="kPu-9x-WNp" secondAttribute="centerX" id="pi9-fP-Sxb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dQe-4w-shG"/>
                     </view>
                 </viewController>

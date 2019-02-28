@@ -16,7 +16,6 @@ class FRPreference: NSObject {
     var isDebug     : Bool      = true
     var axisX       : UInt      = 7
     var axisY       : UInt      = 7
-    var testing     : Bool      = true
     
     var cellWidth   : CGFloat       {
         get {
@@ -45,7 +44,8 @@ class FRPreference: NSObject {
         get {
             print("testing print description")
             let properties = self.propertyDic()
-            let descriptionString = "\tFRPreference\n" + properties.description
+            var descriptionString = "\n######\nFRPreference\n"
+            descriptionString += "variables -\n" + properties.description + "\n######\n"
             
             return descriptionString
         }

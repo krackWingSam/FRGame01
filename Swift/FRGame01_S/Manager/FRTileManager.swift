@@ -12,7 +12,7 @@ class FRTileManager: NSObject {
     
     static let shared = FRTileManager()
     
-    var tileMap     : [Array<FRTile>] = []
+    var tileMap     : [[FRTile]] = []
     var dimensionX  : UInt      = 0
     var dimensionY  : UInt      = 0
     
