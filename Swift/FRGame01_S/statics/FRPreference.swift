@@ -16,8 +16,12 @@ class FRPreference: NSObject {
     var isDebug                 : Bool      = true
     var axisX                   : UInt      = 7
     var axisY                   : UInt      = 7
-    var tileAnimationDuration   : CGFloat   = 0.5
+    var tileAnimationDuration   : CGFloat   = 0.1
     var tileAnimationDelay      : CGFloat   = 0.02
+    
+    // MARK: - test variables
+    var tileRange               : Int       = 7
+    
     
     var cellWidth   : CGFloat       {
         get {

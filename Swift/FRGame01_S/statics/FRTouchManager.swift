@@ -153,11 +153,12 @@ class FRTouchManager: NSObject {
             // remove tiles using tile manager
             FRTileManager.shared.removeTile(tiles: removeTiles)
             
-            // clear array
             array_Touches.removeAll()
-            
             return true
         }
+        
+        // clear array
+        array_Touches.removeAll()
         
         return false
     }

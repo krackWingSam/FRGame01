@@ -45,7 +45,7 @@ class FRTile: NSObject {
     
     
     class func getRandonTile() -> FRTile {
-        let rawValue = arc4random() % UInt32(FRTileType.allCases.count) + 1
+        let rawValue = arc4random() % UInt32(FRPreference.shared.tileRange) + 1
         let type = FRTileType(rawValue: Int(rawValue))
         let tile = FRTile(type: type!)
         
