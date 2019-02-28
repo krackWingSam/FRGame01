@@ -31,7 +31,6 @@
 		89842A5722262FE200DE70CB /* t_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5022262FE200DE70CB /* t_5.png */; };
 		89842A5822262FE200DE70CB /* t_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5122262FE200DE70CB /* t_4.png */; };
 		89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A5C22265F8300DE70CB /* devFRTileViewController.swift */; };
-		89842A622226696C00DE70CB /* FRDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A612226696C00DE70CB /* FRDescription.swift */; };
 		89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A6322266DF300DE70CB /* NSObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		89842A5022262FE200DE70CB /* t_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_5.png; sourceTree = "<group>"; };
 		89842A5122262FE200DE70CB /* t_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_4.png; sourceTree = "<group>"; };
 		89842A5C22265F8300DE70CB /* devFRTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devFRTileViewController.swift; sourceTree = "<group>"; };
-		89842A612226696C00DE70CB /* FRDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRDescription.swift; sourceTree = "<group>"; };
 		89842A6322266DF300DE70CB /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,7 +209,6 @@
 		89842A5E2226692D00DE70CB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				89842A612226696C00DE70CB /* FRDescription.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,
-				89842A622226696C00DE70CB /* FRDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

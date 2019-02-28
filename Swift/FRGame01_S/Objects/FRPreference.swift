@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FRPreference: NSObject, FRDescription {
+class FRPreference: NSObject {
     // MARK: -
     static let shared = FRPreference()
     
@@ -36,6 +36,18 @@ class FRPreference: NSObject, FRDescription {
         if isDebug {
             print("FRPreference class initialize")
             print(self.description)
+        }
+    }
+    
+    
+    // MARK: - override
+    override var description: String {
+        get {
+            print("testing print description")
+            let properties = self.propertyDic()
+            let descriptionString = "\tFRPreference\n" + properties.description
+            
+            return descriptionString
         }
     }
 }

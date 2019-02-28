@@ -20,14 +20,4 @@ extension NSObject {
         
         return dictionary
     }
-    
-    override var description: String {
-        get {
-            print("testing print description")
-            let properties = self.propertyDic()
-            let descriptionString = "\tFRPreference\n" + properties.description
-            
-            return descriptionString
-        }
-    }
 }
