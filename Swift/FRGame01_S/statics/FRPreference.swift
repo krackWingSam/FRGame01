@@ -13,9 +13,11 @@ class FRPreference: NSObject {
     static let shared = FRPreference()
     
     // MARK: - variables
-    var isDebug     : Bool      = true
-    var axisX       : UInt      = 7
-    var axisY       : UInt      = 7
+    var isDebug                 : Bool      = true
+    var axisX                   : UInt      = 7
+    var axisY                   : UInt      = 7
+    var tileAnimationDuration   : CGFloat   = 0.5
+    var tileAnimationDelay      : CGFloat   = 0.02
     
     var cellWidth   : CGFloat       {
         get {
@@ -25,6 +27,11 @@ class FRPreference: NSObject {
     var cellHeight  : CGFloat       {
         get {
             return UIScreen.main.bounds.size.width / axisY.floatValue
+        }
+    }
+    var boardHeight : CGFloat       {
+        get {
+            return UIScreen.main.bounds.size.width
         }
     }
     

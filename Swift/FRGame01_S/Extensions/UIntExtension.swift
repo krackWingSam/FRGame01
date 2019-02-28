@@ -14,4 +14,10 @@ extension UInt {
             return CGFloat(self)
         }
     }
+    
+    var intValue: Int {
+        get {
+            return Int(self)
+        }
+    }
 }

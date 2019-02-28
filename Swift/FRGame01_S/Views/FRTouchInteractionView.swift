@@ -126,7 +126,7 @@ class FRTouchInteractionView: UIView {
         var location : CGPoint! = (touches.first?.location(in: self))!
         let firstTouch: FRTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
-        if firstTouch.x > 0 {
+        if firstTouch.x >= 0 {
             FRTouchManager.shared.setFirstTouch(touch: firstTouch)
         }
         
@@ -138,7 +138,7 @@ class FRTouchInteractionView: UIView {
         var location : CGPoint! = (touches.first?.location(in: self))!
         let nextTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
-        if nextTouch.x > 0 {
+        if nextTouch.x >= 0 {
             _ = FRTouchManager.shared.addNextTouch(touch: nextTouch)
         }
         
@@ -150,12 +150,9 @@ class FRTouchInteractionView: UIView {
         var location : CGPoint! = (touches.first?.location(in: self))!
         let lastTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
-        if lastTouch.x > 0 {
+        if lastTouch.x >= 0 {
             _ = FRTouchManager.shared.setLastTouch(touch: lastTouch)
         }
-        
-        // TODO: do somthing after Finished Dragging
-        
         self.setNeedsDisplay()
     }
 }

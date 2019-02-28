@@ -24,7 +24,8 @@ class FRImageViewManager: NSObject {
         var imageView: UIImageView?
         
         for view in array_ImageView {
-            if view.superview == nil {
+            let rc = CFGetRetainCount(view)
+            if rc < 4 {
                 imageView = view
                 break
             }

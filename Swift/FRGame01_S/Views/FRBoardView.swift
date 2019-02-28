@@ -9,15 +9,27 @@
 import UIKit
 
 class FRBoardView: UIView {
+    let tileAnimationQueue = FRAnimateTileQueue()
     
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.clipsToBounds = true
+        
+        self.addAllTile()
+        
+        // add observer
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceivedTileRemoved(notification:)), name: NSNotification.Name(rawValue: TILEMANAGER_TILE_REMOVED), object: nil)
+        // TODO: removeObserver
     }
 
-    // TODO: add tile in self
+    // add tile in self
     func initTileMap() {
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+        
         FRTileManager.shared.initTileMap()
     }
     
@@ -27,12 +39,24 @@ class FRBoardView: UIView {
         let axisY = FRTileManager.shared.dimensionY
         for x in 0..<axisY {
             for y in 0..<axisX {
-                
+                let tile = tiles[Int(x)][Int(y)]
+                self.addSubview(tile.imageView)
             }
         }
         
-        
+        // animation control
+        FRAnimateTileQueue.pushTilesInAnimationQueue(tiles: tiles)
     }
     
-    // TODO: animation control
+    
+    // MARK: - Notificaion Observer Respond
+    @objc func didReceivedTileRemoved(notification: Notification) {
+        addAllTile()
+    }
+    
+    
+    // MARK: - for debug
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("뷁")
+    }
 }

@@ -14,6 +14,9 @@
 		8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6652224FAD9002310D1 /* DevMode.storyboard */; };
 		8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */; };
 		8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B66A2224FC78002310D1 /* FRPreference.swift */; };
+		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
+		897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */; };
+		897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE1802227B9DE00023404 /* devPreferenceViewController.swift */; };
 		89842A2622251D7900DE70CB /* FRTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2522251D7900DE70CB /* FRTouch.swift */; };
 		89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2822253C3300DE70CB /* FRTouchManager.swift */; };
 		89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2A222613C200DE70CB /* FRBoardView.swift */; };
@@ -44,6 +47,9 @@
 		8955B6652224FAD9002310D1 /* DevMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevMode.storyboard; sourceTree = "<group>"; };
 		8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchInteractionView.swift; sourceTree = "<group>"; };
 		8955B66A2224FC78002310D1 /* FRPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPreference.swift; sourceTree = "<group>"; };
+		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
+		897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devTotalTestViewController.swift; sourceTree = "<group>"; };
+		897AE1802227B9DE00023404 /* devPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devPreferenceViewController.swift; sourceTree = "<group>"; };
 		89842A2522251D7900DE70CB /* FRTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouch.swift; sourceTree = "<group>"; };
 		89842A2822253C3300DE70CB /* FRTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchManager.swift; sourceTree = "<group>"; };
 		89842A2A222613C200DE70CB /* FRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRBoardView.swift; sourceTree = "<group>"; };
@@ -96,7 +102,7 @@
 			children = (
 				8955B64F2224FA66002310D1 /* AppDelegate.swift */,
 				8955B66C2225033A002310D1 /* Extensions */,
-				89842A2722253C0500DE70CB /* Manager */,
+				89842A2722253C0500DE70CB /* statics */,
 				8955B6632224FA95002310D1 /* Objects */,
 				8955B6622224FA8E002310D1 /* ViewControllers */,
 				8955B6672224FB25002310D1 /* Views */,
@@ -129,8 +135,8 @@
 		8955B6632224FA95002310D1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */,
 				89842A3422262A4400DE70CB /* FRTile.swift */,
-				8955B66A2224FC78002310D1 /* FRPreference.swift */,
 				89842A2522251D7900DE70CB /* FRTouch.swift */,
 			);
 			path = Objects;
@@ -163,15 +169,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		89842A2722253C0500DE70CB /* Manager */ = {
+		89842A2722253C0500DE70CB /* statics */ = {
 			isa = PBXGroup;
 			children = (
+				8955B66A2224FC78002310D1 /* FRPreference.swift */,
 				89842A2822253C3300DE70CB /* FRTouchManager.swift */,
 				89842A3022261AA500DE70CB /* FRImageViewManager.swift */,
 				89842A3622262A5500DE70CB /* FRTileManager.swift */,
 				89842A4722262FA900DE70CB /* FRImageManager.swift */,
 			);
-			path = Manager;
+			path = statics;
 			sourceTree = "<group>";
 		};
 		89842A4922262FE200DE70CB /* Images */ = {
@@ -201,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				89842A5C22265F8300DE70CB /* devFRTileViewController.swift */,
+				897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */,
+				897AE1802227B9DE00023404 /* devPreferenceViewController.swift */,
 			);
 			path = DevModeViewControllers;
 			sourceTree = "<group>";
@@ -294,7 +303,10 @@
 				89842A2D2226170D00DE70CB /* UIntExtension.swift in Sources */,
 				8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */,
 				89842A3522262A4400DE70CB /* FRTile.swift in Sources */,
+				897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */,
+				897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */,
 				89842A2F2226184A00DE70CB /* IntExtension.swift in Sources */,
+				897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */,
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,
