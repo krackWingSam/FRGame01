@@ -20,7 +20,6 @@ class FRTouchManager: NSObject {
     var currentTouch: FRTouch!
     
     
-    // MARK: - Public
     /**
      - 입력된 터치 오브젝트의 위치가 기 입력된 터치 오브젝트의 위치와 겹치는지 확인
      - Parameters:
@@ -131,13 +130,19 @@ class FRTouchManager: NSObject {
      - Returns: 마지막으로 터치 된 타일 위에 좌표와 입력된 터치 오브젝트의 좌표가 동일하다면 true를, 아니라면 false를 반환
      */
     private func checkLastTouch(touch: FRTouch) -> Bool {
-        let lastTouch = array_Touches.last!
+        guard let lastTouch = array_Touches.last else {
+            return false
+        }
+        
         if touch.isEqual(touch:lastTouch) {
             return true
         }
         
         return false
     }
+    
+    
+    // MARK: - Public
     
     /**
      - 첫번째 터치 오브젝트를 삽입한다.
@@ -218,24 +223,34 @@ class FRTouchManager: NSObject {
             print("add ended : " + touch.description)
         }
         
-        // make tile array for remove
-        var removeTiles : [FRTile] = []
-        for touch in array_Touches {
-            let dimensionY = Int(FRPreference.shared.axisY - 1)
-            let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
-            removeTiles.append(tile)
-        }
         
-        // remove tiles using tile manager
-        FRTileManager.shared.removeTile(tiles: removeTiles)
-        
-        // clear array
-        array_Touches.removeAll()
-        
-        if checkInsideOfInteractionView(touch: touch) {       //check valid touch
+        if checkLastTouch(touch: touch) {       //check valid touch
+            
+            // make tile array for remove
+            var removeTiles : [FRTile] = []
+            for touch in array_Touches {
+                let dimensionY = Int(FRPreference.shared.axisY - 1)
+                let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
+                removeTiles.append(tile)
+            }
+            
+            // remove tiles using tile manager
+            FRTileManager.shared.removeTile(tiles: removeTiles)
+            array_Touches.removeAll()
             return true
         }
         
+        array_Touches.removeAll()
+        
+        if FRPreference.shared.isDebug {
+            print("last touch failed")
+        }
+        
         return false
+    }
+    
+    /// 배열을 초기화 한다.
+    func clearTouchArray() {
+        array_Touches.removeAll()
     }
 }
