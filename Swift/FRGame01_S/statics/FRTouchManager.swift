@@ -10,17 +10,24 @@ import UIKit
 
 class FRTouchManager: NSObject {
     
+    /// Singleton object
     static let shared: FRTouchManager = FRTouchManager()
     
+    /// 입력된 유효한 터치 오브젝트의 배열
     var array_Touches: Array<FRTouch> = []
+    
+    /// 마지막으로 입력된 터치 오브젝트
     var currentTouch: FRTouch!
     
-    override init() {
-        
-    }
     
     // MARK: - Public
-    func checkSameTile(touch: FRTouch) -> Bool {
+    /**
+     - 입력된 터치 오브젝트의 위치가 기 입력된 터치 오브젝트의 위치와 겹치는지 확인
+     - Parameters:
+        - touch: 입력된 터치 오브젝트
+     - Returns: 겹치는 위치에 있는 터치라면 false를, 겹치지 않는다면 true를 리턴한다
+     */
+    private func checkSameTile(touch: FRTouch) -> Bool {
         let axisY = FRPreference.shared.axisY
         
         let firstTouch = array_Touches.first
@@ -39,7 +46,14 @@ class FRTouchManager: NSObject {
         return true
     }
     
-    func checkValidTouch(touch: FRTouch) -> Bool {
+    
+    /**
+     - 입력된 터치 오브젝트의 유효성 검사
+     - Parameters:
+        - touch: 입력된 터치 오브젝트
+     - Returns: 터치 오브젝트가 유효하다면 true를, 유효하지 않다면 false를 리턴
+     */
+    private func checkValidTouch(touch: FRTouch) -> Bool {
         if array_Touches.count <= 0 {
             return true
         }
@@ -68,7 +82,14 @@ class FRTouchManager: NSObject {
         return true
     }
     
-    func checkRemovableTouch(touch: FRTouch) -> Bool {
+    
+    /**
+     - 삭제가 가능한 터치 오브젝트인지 확인한다
+     - Parameters:
+        - touch: 입력된 터치 오브젝트
+     - Returns: 입력된 터치 오브젝트가 삭제 가능한 경우에는 true를, 삭제하지 못하는 경우에는 false를 리턴한다.
+     */
+    private func checkRemovableTouch(touch: FRTouch) -> Bool {
         if array_Touches.count < 2 {
             return false
         }
@@ -81,7 +102,35 @@ class FRTouchManager: NSObject {
         return false;
     }
     
-    func checkLastTouch(touch: FRTouch) -> Bool {
+    
+    /**
+     터치 오브젝트가 FRInteractionView 내부에서 터치된 오브젝트인지 아닌지를 결정
+     - Parameters:
+        - touch: 입력된 터치 오브젝트
+     - Returns: FRInteractionView 내부에서 터치된 경우라면 true를, 아니라면 false를 반환
+     */
+    private func checkInsideOfInteractionView(touch: FRTouch) -> Bool {
+        if touch.x < 0 || touch.y < 0 {
+            return false
+        }
+        
+        if touch.x > FRPreference.shared.axisX || touch.y > FRPreference.shared.axisY {
+            return false
+        }
+        
+        return true
+    }
+    
+    
+    /**
+     터치 오브젝트가 마지막으로 터치된 타일 위에 있는지 확인한다
+     
+     - Parameters:
+        - touch: FRTouch object
+     
+     - Returns: 마지막으로 터치 된 타일 위에 좌표와 입력된 터치 오브젝트의 좌표가 동일하다면 true를, 아니라면 false를 반환
+     */
+    private func checkLastTouch(touch: FRTouch) -> Bool {
         let lastTouch = array_Touches.last!
         if touch.isEqual(touch:lastTouch) {
             return true
@@ -90,6 +139,12 @@ class FRTouchManager: NSObject {
         return false
     }
     
+    /**
+     - 첫번째 터치 오브젝트를 삽입한다.
+     - 입력된 터치 오브젝트가 유효한 좌표인 경우에는 삽입을, 아닌 경우에는 삽입하지 않는다.
+     - Parameters:
+        - touch: 입력될 터치 오브젝트
+     */
     func setFirstTouch(touch: FRTouch) {
         array_Touches.removeAll()
         
@@ -104,6 +159,17 @@ class FRTouchManager: NSObject {
         array_Touches.append(touch)
     }
     
+    
+    /**
+     터치 오브젝트를 배열에 조건에 따라서 더하거나, 뺀다.
+     - 직전에 배열에 추가된 오브젝트와 같은 타일 위치를 갖고 있다면 배열에서 마지막 터치 오브젝트를 제거하고, 서로 다르다면 배열에 추가한다.
+     - 배열에 들어갈 오브젝트는 처음에 입력된 터치 오브젝트의 위치에 있는 타일과 같은 타입이어야 한다
+     
+     - Parameters:
+        - touch: 배열에 더하고자 하는 터치 오브젝트
+     
+     - Returns: 배열에 더하거나 뺄 수 있는 오브젝트인 경우에는 true를, 유효하지 않은 Touch의 경우에는 false를 리턴한다.
+     */
     func addNextTouch(touch: FRTouch) -> Bool {
         currentTouch = touch
         
@@ -132,33 +198,43 @@ class FRTouchManager: NSObject {
         return true
     }
     
+    
+    /**
+     set last touch object
+     - 마지막으로 터치된 위치에 따라서 해당 배열에 저장된 터치 오브젝트의 사용 유무를 결정 후 리턴
+     - 처음부터 끝까지의 터치 오브젝트 배열의 사용 유무를 리턴
+     
+     - Parameters:
+        - touch: 마지막 터치 오브젝트 (FRTouch)
+     
+     - Returns: 마지막 터치로 사용 가능한 오브젝트인 경우에는 true를, 불가능한 오브젝트인 경우에는 false를 리턴한다.
+     */
     func setLastTouch(touch: FRTouch) -> Bool {
-        if self.checkLastTouch(touch: touch) {
-            if checkValidTouch(touch: touch) {
-                array_Touches.append(touch)
-            }
-            
-//            if FRPreference.shared.isDebug {
-//                print("add ended : " + touch.description)
-//            }
-            
-            // make tile array for remove
-            var removeTiles : [FRTile] = []
-            for touch in array_Touches {
-                let dimensionY = Int(FRPreference.shared.axisY - 1)
-                let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
-                removeTiles.append(tile)
-            }
-            
-            // remove tiles using tile manager
-            FRTileManager.shared.removeTile(tiles: removeTiles)
-            
-            array_Touches.removeAll()
-            return true
+        if checkValidTouch(touch: touch) {
+            array_Touches.append(touch)
         }
+        
+        if FRPreference.shared.isDebug {
+            print("add ended : " + touch.description)
+        }
+        
+        // make tile array for remove
+        var removeTiles : [FRTile] = []
+        for touch in array_Touches {
+            let dimensionY = Int(FRPreference.shared.axisY - 1)
+            let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
+            removeTiles.append(tile)
+        }
+        
+        // remove tiles using tile manager
+        FRTileManager.shared.removeTile(tiles: removeTiles)
         
         // clear array
         array_Touches.removeAll()
+        
+        if checkInsideOfInteractionView(touch: touch) {       //check valid touch
+            return true
+        }
         
         return false
     }
