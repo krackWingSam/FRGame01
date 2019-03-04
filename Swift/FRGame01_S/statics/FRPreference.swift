@@ -13,26 +13,40 @@ class FRPreference: NSObject {
     static let shared = FRPreference()
     
     // MARK: - variables
+    /// 디버그모드를 위한 flag
     var isDebug                 : Bool      = true
+    
+    /// 보드의 X 좌표
     var axisX                   : UInt      = 7
+    
+    /// 보드의 Y 좌표
     var axisY                   : UInt      = 7
+    
+    /// 타일 애니메이션의 길이
     var tileAnimationDuration   : CGFloat   = 0.1
+    
+    /// 각 타일 애니메이션의 실행전 delay
     var tileAnimationDelay      : CGFloat   = 0.02
     
     // MARK: - test variables
     var tileRange               : Int       = 7
     
     
+    /// 타일의 너비
     var cellWidth   : CGFloat       {
         get {
             return UIScreen.main.bounds.size.width / axisX.floatValue
         }
     }
+    
+    /// 타일의 높이
     var cellHeight  : CGFloat       {
         get {
             return UIScreen.main.bounds.size.width / axisY.floatValue
         }
     }
+    
+    /// 보드의 높이
     var boardHeight : CGFloat       {
         get {
             return UIScreen.main.bounds.size.width
