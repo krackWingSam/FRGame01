@@ -19,10 +19,12 @@ class FRAnimateTileQueue: NSObject {
                 
                 if originFrame != newFrame {
                     needAnimationCount += 1
+//                    var duration = FRPreference.shared.tileAnimationDuration
+//                    duration = duration * (newFrame.origin.y - originFrame.origin.y)/FRPreference.shared.cellHeight
                     let duration = TimeInterval(FRPreference.shared.tileAnimationDuration)
                     let delay = TimeInterval(FRPreference.shared.tileAnimationDelay) * TimeInterval(needAnimationCount)
                     
-                    UIView.animateKeyframes(withDuration: duration, delay: delay, options: [], animations: {
+                    UIView.animateKeyframes(withDuration: TimeInterval(duration), delay: delay, options: [], animations: {
                         tile.imageView.frame = tile.animatedFrame
                     })
                 }

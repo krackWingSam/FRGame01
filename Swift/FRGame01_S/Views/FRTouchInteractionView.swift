@@ -41,6 +41,7 @@ class FRTouchInteractionView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
+        initInterfaceParam()
         drawTouchs()
         if FRPreference.shared.isDebug {
             self.drawGrid()
@@ -165,6 +166,9 @@ class FRTouchInteractionView: UIView {
         
         if lastTouch.x >= 0 {
             _ = FRTouchManager.shared.setLastTouch(touch: lastTouch)
+        }
+        else {
+            FRTouchManager.shared.clearTouchArray()
         }
         self.setNeedsDisplay()
     }

@@ -37,7 +37,7 @@ class FRTile: NSObject {
             let width = FRPreference.shared.cellWidth
             let height = FRPreference.shared.cellHeight
             let x = width * CGFloat(axisX)
-            let y = height * CGFloat(dimensionY - axisY)
+            let y = height * CGFloat(Int(dimensionY) - Int(axisY))
             
             return CGRect(x: x, y: y, width: width, height: height)
         }
@@ -70,10 +70,13 @@ class FRTile: NSObject {
     // MARK: - override
     override var description: String {
         get {
-            print("testing print description")
             let properties = self.propertyDic()
-            var descriptionString = "\n######\nFRTile\n"
-            descriptionString += "variables -\n" + properties.description + "\n######\n"
+            
+            var descriptionString = "FRTile - \n"
+            for key in Array(properties.keys) {
+                descriptionString += key + " : " + properties[key].debugDescription
+                descriptionString += "\n"
+            }
             
             return descriptionString
         }

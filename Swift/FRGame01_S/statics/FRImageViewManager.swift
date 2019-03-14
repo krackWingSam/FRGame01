@@ -20,7 +20,12 @@ class FRImageViewManager: NSObject {
     func makeImageView() -> UIImageView {
         let width = FRPreference.shared.cellWidth
         let height = FRPreference.shared.cellHeight
-        return UIImageView(frame: CGRect(x: -width, y: -height, width: width, height: height))
+        
+        let imageView = UIImageView(frame: CGRect(x: -width, y: -height, width: width, height: height))
+        imageView.layer.cornerRadius = width/2
+        imageView.clipsToBounds = true
+        
+        return imageView
     }
     
     /**

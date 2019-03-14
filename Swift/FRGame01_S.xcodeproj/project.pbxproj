@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A3672223A3A1E00F6A496 /* UILabelExtension.swift */; };
 		8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B64F2224FA66002310D1 /* AppDelegate.swift */; };
 		8955B6552224FA66002310D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6532224FA66002310D1 /* Main.storyboard */; };
 		8955B6572224FA67002310D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6562224FA67002310D1 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		894A3672223A3A1E00F6A496 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		8955B64C2224FA66002310D1 /* FRGame01_S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRGame01_S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8955B64F2224FA66002310D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8955B6542224FA66002310D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				89842A2C2226170D00DE70CB /* UIntExtension.swift */,
 				89842A2E2226184A00DE70CB /* IntExtension.swift */,
 				89842A6322266DF300DE70CB /* NSObjectExtension.swift */,
+				894A3672223A3A1E00F6A496 /* UILabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */,
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
+				894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.fermata.FRGame01-S";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.fermata.FRGame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.fermata.FRGame01-S";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.fermata.FRGame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -26,8 +26,9 @@ class FRTileManager: NSObject {
         let boardHeight = FRPreference.shared.boardHeight
         let width = FRPreference.shared.cellWidth
         let height = FRPreference.shared.cellHeight
+        let count = FRPreference.shared.tileRange
         let x = CGFloat(tile.axisX) * width
-        let y = CGFloat(tile.axisY) * height - boardHeight
+        let y = CGFloat(count-1 - Int(tile.axisY)) * height - boardHeight
         
         return CGRect(x: x, y: y, width: width, height: height)
     }
