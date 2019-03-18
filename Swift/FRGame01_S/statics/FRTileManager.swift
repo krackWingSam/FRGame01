@@ -107,8 +107,11 @@ class FRTileManager: NSObject {
         }
     }
     
+    /// 타일의 형태에 따라서 삭제하기 전 함수들을 수행한다
     func removeTile(tiles: [FRTile]) {
         for tile in tiles {
+            //TODO: check removable tile
+            
             tile.imageView.removeFromSuperview()
             
             for yArray in tileMap {

@@ -15,6 +15,8 @@
 		8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6652224FAD9002310D1 /* DevMode.storyboard */; };
 		8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */; };
 		8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B66A2224FC78002310D1 /* FRPreference.swift */; };
+		897480D9223F972E00AFCB60 /* t_skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480D8223F972E00AFCB60 /* t_skull.png */; };
+		897480DB223F978700AFCB60 /* t_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480DA223F978700AFCB60 /* t_sword.png */; };
 		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
 		897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */; };
 		897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE1802227B9DE00023404 /* devPreferenceViewController.swift */; };
@@ -49,6 +51,8 @@
 		8955B6652224FAD9002310D1 /* DevMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevMode.storyboard; sourceTree = "<group>"; };
 		8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchInteractionView.swift; sourceTree = "<group>"; };
 		8955B66A2224FC78002310D1 /* FRPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPreference.swift; sourceTree = "<group>"; };
+		897480D8223F972E00AFCB60 /* t_skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_skull.png; sourceTree = "<group>"; };
+		897480DA223F978700AFCB60 /* t_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_sword.png; sourceTree = "<group>"; };
 		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
 		897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devTotalTestViewController.swift; sourceTree = "<group>"; };
 		897AE1802227B9DE00023404 /* devPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devPreferenceViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		89842A4A22262FE200DE70CB /* testing tiles */ = {
 			isa = PBXGroup;
 			children = (
+				897480DA223F978700AFCB60 /* t_sword.png */,
+				897480D8223F972E00AFCB60 /* t_skull.png */,
 				89842A4B22262FE200DE70CB /* t_1.png */,
 				89842A4C22262FE200DE70CB /* t_3.png */,
 				89842A4D22262FE200DE70CB /* t_2.png */,
@@ -279,10 +285,12 @@
 				89842A5322262FE200DE70CB /* t_3.png in Resources */,
 				8955B65A2224FA67002310D1 /* LaunchScreen.storyboard in Resources */,
 				8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */,
+				897480DB223F978700AFCB60 /* t_sword.png in Resources */,
 				89842A5722262FE200DE70CB /* t_5.png in Resources */,
 				89842A5822262FE200DE70CB /* t_4.png in Resources */,
 				89842A5522262FE200DE70CB /* t_6.png in Resources */,
 				8955B6572224FA67002310D1 /* Assets.xcassets in Resources */,
+				897480D9223F972E00AFCB60 /* t_skull.png in Resources */,
 				89842A5222262FE200DE70CB /* t_1.png in Resources */,
 				8955B6552224FA66002310D1 /* Main.storyboard in Resources */,
 				89842A5422262FE200DE70CB /* t_2.png in Resources */,

@@ -9,8 +9,8 @@
 import UIKit
 
 public enum TileImageKey: String, CaseIterable {
-    case ImageKey_1 = "t_1"
-    case ImageKey_2 = "t_2"
+    case ImageKey_1 = "t_skull"
+    case ImageKey_2 = "t_sword"
     case ImageKey_3 = "t_3"
     case ImageKey_4 = "t_4"
     case ImageKey_5 = "t_5"

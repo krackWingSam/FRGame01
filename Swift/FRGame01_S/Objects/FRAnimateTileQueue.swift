@@ -14,22 +14,18 @@ class FRAnimateTileQueue: NSObject {
         
         for yArray in tiles {
             for tile in yArray {
-                needAnimationCount += 1
-                let duration = TimeInterval(FRPreference.shared.tileAnimationDuration)
-                let delay = TimeInterval(FRPreference.shared.tileAnimationDelay) * TimeInterval(needAnimationCount)
+                let oldFrame = tile.imageView.frame
+                let newFrame = tile.animatedFrame
                 
-                UIView.animateKeyframes(withDuration: TimeInterval(duration), delay: delay, options: [.layoutSubviews], animations: {
-                    let dimensionY = FRPreference.shared.axisY - 1
-                    let width = FRPreference.shared.cellWidth
-                    let height = FRPreference.shared.cellHeight
-                    let x = width * CGFloat(tile.axisX)
-                    let y = height * CGFloat(Int(dimensionY) - Int(tile.axisY))
-                    let newFrame = CGRect(x: x, y: y, width: width, height: height)
-                    tile.imageView.frame = newFrame
-//                    print("(\(tile.axisX), \(tile.axisY))")
-//                    print("(\(x), \(y))")
-//                    print(tile.imageView.frame)
-                })
+                if oldFrame.origin.y != newFrame.origin.y {
+                    needAnimationCount += 1
+                    let duration = TimeInterval(FRPreference.shared.tileAnimationDuration)
+                    let delay = TimeInterval(FRPreference.shared.tileAnimationDelay) * TimeInterval(needAnimationCount)
+                    
+                    UIView.animateKeyframes(withDuration: TimeInterval(duration), delay: delay, options: [.layoutSubviews], animations: {
+                        tile.imageView.frame = newFrame
+                    })
+                }
             }
         }
     }

@@ -9,8 +9,8 @@
 import UIKit
 
 public enum FRTileType: Int, CaseIterable {
-    case FRType_Test_1 = 1,
-         FRType_Test_2,
+    case FRType_Sword = 1,
+         FRType_Enemy,
          FRType_Test_3,
          FRType_Test_4,
          FRType_Test_5,

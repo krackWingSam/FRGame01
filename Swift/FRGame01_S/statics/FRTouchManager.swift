@@ -24,7 +24,7 @@ class FRTouchManager: NSObject {
      - 입력된 터치 오브젝트의 위치가 기 입력된 터치 오브젝트의 위치와 겹치는지 확인
      - Parameters:
         - touch: 입력된 터치 오브젝트
-     - Returns: 겹치는 위치에 있는 터치라면 false를, 겹치지 않는다면 true를 리턴한다
+     - Returns: 겹치는 위치에 있는 터치라면 false를, 겹치지 않는다면 true를 리턴한다. 공격 타일과 적 타일은 동시에 선택이 가능해야 한다
      */
     private func checkSameTile(touch: FRTouch) -> Bool {
         let axisY = FRPreference.shared.axisY
@@ -37,6 +37,10 @@ class FRTouchManager: NSObject {
         let currentX = touch.x
         let currentY = axisY.intValue-1 - touch.y
         let currentTile = FRTileManager.shared.tileMap[currentX][currentY]
+        
+        if (tile.type == .FRType_Sword || tile.type == .FRType_Enemy) && (currentTile.type == .FRType_Sword || currentTile.type == .FRType_Enemy) {
+            return true
+        }
         
         if tile.type.rawValue != currentTile.type.rawValue {
             return false
