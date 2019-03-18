@@ -39,7 +39,8 @@ class FRImageViewManager: NSObject {
         
         for view in array_ImageView {
             let rc = CFGetRetainCount(view)
-            if rc < 4 {
+//            print("\(view) + retain count : \(rc)")
+            if rc < 3 {
                 imageView = view
                 break
             }

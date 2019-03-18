@@ -368,6 +368,13 @@
                                     <action selector="action_Reset:" destination="MQk-xw-Niu" eventType="touchUpInside" id="K0X-oK-yZB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zok-Cy-Pdr">
+                                <rect key="frame" x="148" y="692" width="79" height="30"/>
+                                <state key="normal" title="Break Point"/>
+                                <connections>
+                                    <action selector="action_BreakPoint:" destination="MQk-xw-Niu" eventType="touchUpInside" id="w8a-Hc-GQn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -381,6 +388,7 @@
                             <constraint firstItem="4iq-dI-Ib2" firstAttribute="height" secondItem="LB6-tk-vU7" secondAttribute="height" id="Pr6-xl-5P8"/>
                             <constraint firstItem="LB6-tk-vU7" firstAttribute="leading" secondItem="7Y0-rn-k5D" secondAttribute="leading" id="Rlr-oM-rNA"/>
                             <constraint firstItem="4iq-dI-Ib2" firstAttribute="leading" secondItem="LB6-tk-vU7" secondAttribute="trailing" id="SUz-7h-USK"/>
+                            <constraint firstItem="zok-Cy-Pdr" firstAttribute="centerX" secondItem="NPJ-2l-rsb" secondAttribute="centerX" id="Sb4-Y0-qIZ"/>
                             <constraint firstItem="XJ6-LN-CLd" firstAttribute="leading" secondItem="7Y0-rn-k5D" secondAttribute="leading" id="SdB-aR-TrT"/>
                             <constraint firstItem="4h4-DP-mry" firstAttribute="trailing" secondItem="XJ6-LN-CLd" secondAttribute="trailing" id="TQY-Lj-Ci0"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="trailing" secondItem="4iq-dI-Ib2" secondAttribute="trailing" id="bG1-vW-lKz"/>
@@ -388,6 +396,7 @@
                             <constraint firstItem="4h4-DP-mry" firstAttribute="leading" secondItem="XJ6-LN-CLd" secondAttribute="leading" id="er3-J8-AYV"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="trailing" secondItem="IIK-vO-eXP" secondAttribute="trailing" id="hvT-ii-5sc"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="bottom" secondItem="IIK-vO-eXP" secondAttribute="bottom" id="jW3-bm-iNL"/>
+                            <constraint firstItem="IIK-vO-eXP" firstAttribute="top" secondItem="zok-Cy-Pdr" secondAttribute="bottom" constant="16" id="uDL-Qd-GA4"/>
                             <constraint firstItem="XJ6-LN-CLd" firstAttribute="centerX" secondItem="NPJ-2l-rsb" secondAttribute="centerX" id="wUz-cz-I73"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Y0-rn-k5D"/>

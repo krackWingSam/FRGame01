@@ -28,4 +28,13 @@ class devTotalTestViewController: UIViewController {
         viewBoard.initTileMap()
         viewBoard.addAllTile()
     }
+    
+    @IBAction func action_BreakPoint(_ sender: UIButton) {
+        let tiles = FRTileManager.shared.tileMap
+        for yArray in tiles {
+            for tile in yArray {
+                print("tile(\(tile.axisX), \(tile.axisY)) : " + tile.frame.debugDescription)
+            }
+        }
+    }
 }
