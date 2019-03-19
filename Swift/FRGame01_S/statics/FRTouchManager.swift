@@ -227,10 +227,10 @@ class FRTouchManager: NSObject {
             print("add ended : " + touch.description)
         }
         
-        
-        if checkLastTouch(touch: touch) {       //check valid touch
-            
+//        마지막 터치 부분이 배열의 가장 마지막과 같은지 확인
+//        if checkLastTouch(touch: touch) {       //check valid touch
             // make tile array for remove
+        if array_Touches.count > 1 {
             var removeTiles : [FRTile] = []
             for touch in array_Touches {
                 let dimensionY = Int(FRPreference.shared.axisY - 1)
@@ -243,14 +243,15 @@ class FRTouchManager: NSObject {
             array_Touches.removeAll()
             return true
         }
-        
-        array_Touches.removeAll()
-        
-        if FRPreference.shared.isDebug {
-            print("last touch failed")
+        else {
+            array_Touches.removeAll()
+
+            if FRPreference.shared.isDebug {
+                print("last touch failed")
+            }
+
+            return false
         }
-        
-        return false
     }
     
     /// 배열을 초기화 한다.

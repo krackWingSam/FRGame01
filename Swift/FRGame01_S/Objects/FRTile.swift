@@ -49,6 +49,10 @@ class FRTile: NSObject {
         let type = FRTileType(rawValue: Int(rawValue))
         let tile = FRTile(type: type!)
         
+        if tile.type == .FRType_Enemy {
+            //TODO: generate life, demage
+        }
+        
         return tile
     }
 

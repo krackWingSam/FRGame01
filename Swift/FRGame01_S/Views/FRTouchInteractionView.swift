@@ -17,6 +17,8 @@ class FRTouchInteractionView: UIView {
     
     var touchLinePath   : UIBezierPath!
     
+    var isAvailableTouch: Bool      = false
+    
 
     func initInterfaceParam() {
         dimensionX = FRPreference.shared.axisX
@@ -59,7 +61,12 @@ class FRTouchInteractionView: UIView {
         
         if touches.count != 0 {
             touchLinePath.lineWidth = 5.0
-            UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5).set()
+            if isAvailableTouch {
+                UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5).set()
+            }
+            else {
+                UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.3).set()
+            }
             
             let startTouch = touches[0]
             touchLinePath.move(to: CGPoint(x: startTouch.x.floatValue * cellWidth + cellWidth/2, y: startTouch.y.floatValue * cellHeight + cellHeight/2))
@@ -127,13 +134,20 @@ class FRTouchInteractionView: UIView {
     }
     
     
-    // TODO: - have to find some bugs when fast movement touches, touchesended not work.
     // MARK: - Touches
+    func isAvailableLocation(_ location: CGPoint) -> Bool {
+        if location.y < 0 || location.y > self.frame.size.height {
+            return false
+        }
+        return true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
         let dimension: CGPoint = CGPoint(x: CGFloat(dimensionX), y: CGFloat(dimensionY))
         var location : CGPoint! = (touches.first?.location(in: self))!
+        isAvailableTouch = isAvailableLocation(location)
         let firstTouch: FRTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if firstTouch.x >= 0 {
@@ -148,6 +162,7 @@ class FRTouchInteractionView: UIView {
         
         let dimension: CGPoint = CGPoint(x: CGFloat(dimensionX), y: CGFloat(dimensionY))
         var location : CGPoint! = (touches.first?.location(in: self))!
+        isAvailableTouch = isAvailableLocation(location)
         let nextTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if nextTouch.x >= 0 {
@@ -162,6 +177,12 @@ class FRTouchInteractionView: UIView {
         
         let dimension: CGPoint = CGPoint(x: CGFloat(dimensionX), y: CGFloat(dimensionY))
         var location : CGPoint! = (touches.first?.location(in: self))!
+        isAvailableTouch = isAvailableLocation(location)
+        
+        if location.y < 0 || location.y > self.frame.size.height {
+            FRTouchManager.shared.clearTouchArray()
+        }
+        
         let lastTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
         if lastTouch.x >= 0 {
