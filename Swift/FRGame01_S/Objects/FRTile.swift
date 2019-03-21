@@ -71,6 +71,10 @@ class FRTile: NSObject {
         imageView.image = FRImageManager.shared.getImage(type: type)
     }
     
+    public func removeTile() {
+        self.imageView.removeFromSuperview()
+    }
+    
     // MARK: - override
     override var description: String {
         get {
