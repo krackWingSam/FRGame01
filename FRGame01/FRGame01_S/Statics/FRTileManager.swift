@@ -109,10 +109,13 @@ class FRTileManager: NSObject {
         }
     }
     
-    /// 타일의 형태에 따라서 삭제하기 전 함수들을 수행한다
+    /// 타일을 삭제한다. 타일의 형태에 따라서 삭제하기 전 함수들을 수행한다
     func removeTile(tiles: [FRTile]) {
         for tile in tiles {
             //TODO: 삭제되기 직전 수행해야 하는 함수를 이곳에서 수행한다
+            
+            // 사라지는 타일을 Score 에 등록한다
+            Score.shared.appendTile(tile)
             
             tile.imageView.removeFromSuperview()
             

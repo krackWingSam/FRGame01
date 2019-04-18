@@ -61,6 +61,10 @@ class FRTouchManager: NSObject {
             return true
         }
         
+        if touch.x < 0 || touch.y < 0 {
+            return false
+        }
+        
         let lastTouch: FRTouch = array_Touches.last!
         if abs(Int(lastTouch.x) - Int(touch.x)) > 1 {
             return false
@@ -196,14 +200,6 @@ class FRTouchManager: NSObject {
             return false
         }
         
-        if FRPreference.shared.isDebug {
-//            print("touches array start - ")
-//            for obj in array_Touches {
-//                print(obj)
-//            }
-//            print(" - touches array end")
-        }
-        
         return true
     }
     
@@ -237,6 +233,8 @@ class FRTouchManager: NSObject {
                 let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
                 removeTiles.append(tile)
             }
+            
+            Score.shared.turn.value += 1
             
             // remove tiles using tile manager
             FRTileManager.shared.removeTile(tiles: removeTiles)

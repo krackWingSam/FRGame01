@@ -452,6 +452,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn : " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ori-xS-LUW">
+                                <rect key="frame" x="160" y="66" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-it-RJ3">
+                                <rect key="frame" x="222" y="66" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -465,6 +477,8 @@
                             <constraint firstItem="4iq-dI-Ib2" firstAttribute="width" secondItem="LB6-tk-vU7" secondAttribute="width" id="7KZ-kg-IWi"/>
                             <constraint firstItem="4h4-DP-mry" firstAttribute="bottom" secondItem="XJ6-LN-CLd" secondAttribute="bottom" id="9j5-bL-cPY"/>
                             <constraint firstItem="XJ6-LN-CLd" firstAttribute="top" secondItem="GJd-VC-FZT" secondAttribute="bottom" constant="8" id="9pN-mB-SKL"/>
+                            <constraint firstItem="8SE-it-RJ3" firstAttribute="bottom" secondItem="ori-xS-LUW" secondAttribute="bottom" id="9sN-vs-kAI"/>
+                            <constraint firstItem="GJd-VC-FZT" firstAttribute="trailing" secondItem="ori-xS-LUW" secondAttribute="trailing" id="B74-ns-88h"/>
                             <constraint firstItem="4h4-DP-mry" firstAttribute="top" secondItem="XJ6-LN-CLd" secondAttribute="top" id="BkD-Vi-Mst"/>
                             <constraint firstItem="FTl-ZG-b5R" firstAttribute="leading" secondItem="7Y0-rn-k5D" secondAttribute="leading" constant="16" id="Gja-Nw-fzn"/>
                             <constraint firstItem="VSq-3U-Q5k" firstAttribute="leading" secondItem="kFl-gI-XA8" secondAttribute="leading" id="ICb-PM-08y"/>
@@ -472,10 +486,12 @@
                             <constraint firstItem="MNy-M3-eX7" firstAttribute="leading" secondItem="FTl-ZG-b5R" secondAttribute="leading" id="LD1-ct-DXt"/>
                             <constraint firstItem="IDX-VO-ydo" firstAttribute="leading" secondItem="BeV-Al-UqK" secondAttribute="leading" id="LDQ-gT-bOK"/>
                             <constraint firstItem="VSq-3U-Q5k" firstAttribute="top" secondItem="kFl-gI-XA8" secondAttribute="bottom" constant="8" id="LDe-zp-Jdm"/>
+                            <constraint firstItem="7LA-lB-pnH" firstAttribute="trailing" secondItem="8SE-it-RJ3" secondAttribute="trailing" id="LlY-Mu-3rd"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="trailing" secondItem="XJ6-LN-CLd" secondAttribute="trailing" id="NFQ-3J-cap"/>
                             <constraint firstItem="XJ6-LN-CLd" firstAttribute="top" secondItem="IDX-VO-ydo" secondAttribute="bottom" constant="8" id="PFP-6e-wos"/>
                             <constraint firstItem="0Hy-Hm-rip" firstAttribute="leading" secondItem="Bbm-S4-2KO" secondAttribute="leading" id="Pf7-11-K86"/>
                             <constraint firstItem="4iq-dI-Ib2" firstAttribute="height" secondItem="LB6-tk-vU7" secondAttribute="height" id="Pr6-xl-5P8"/>
+                            <constraint firstItem="GJd-VC-FZT" firstAttribute="leading" secondItem="ori-xS-LUW" secondAttribute="leading" id="PuX-Ff-QO5"/>
                             <constraint firstItem="LB6-tk-vU7" firstAttribute="leading" secondItem="7Y0-rn-k5D" secondAttribute="leading" id="Rlr-oM-rNA"/>
                             <constraint firstItem="4iq-dI-Ib2" firstAttribute="leading" secondItem="LB6-tk-vU7" secondAttribute="trailing" id="SUz-7h-USK"/>
                             <constraint firstItem="XJ6-LN-CLd" firstAttribute="leading" secondItem="7Y0-rn-k5D" secondAttribute="leading" id="SdB-aR-TrT"/>
@@ -483,6 +499,7 @@
                             <constraint firstItem="MNy-M3-eX7" firstAttribute="trailing" secondItem="FTl-ZG-b5R" secondAttribute="trailing" id="TCd-k6-VNP"/>
                             <constraint firstItem="wyk-0K-qkw" firstAttribute="leading" secondItem="1U9-Nn-sby" secondAttribute="leading" id="TGx-lP-cG6"/>
                             <constraint firstItem="4h4-DP-mry" firstAttribute="trailing" secondItem="XJ6-LN-CLd" secondAttribute="trailing" id="TQY-Lj-Ci0"/>
+                            <constraint firstItem="7LA-lB-pnH" firstAttribute="leading" secondItem="8SE-it-RJ3" secondAttribute="leading" id="VPa-9t-XAG"/>
                             <constraint firstItem="FTl-ZG-b5R" firstAttribute="top" secondItem="XJ6-LN-CLd" secondAttribute="bottom" constant="8" id="Z3m-i9-4t6"/>
                             <constraint firstItem="1U9-Nn-sby" firstAttribute="bottom" secondItem="BeV-Al-UqK" secondAttribute="bottom" id="adP-w7-maC"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="trailing" secondItem="4iq-dI-Ib2" secondAttribute="trailing" id="bG1-vW-lKz"/>
@@ -494,6 +511,7 @@
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="trailing" secondItem="IIK-vO-eXP" secondAttribute="trailing" id="hvT-ii-5sc"/>
                             <constraint firstItem="Bbm-S4-2KO" firstAttribute="leading" secondItem="GJd-VC-FZT" secondAttribute="leading" id="jMv-AE-GFO"/>
                             <constraint firstItem="7Y0-rn-k5D" firstAttribute="bottom" secondItem="IIK-vO-eXP" secondAttribute="bottom" id="jW3-bm-iNL"/>
+                            <constraint firstItem="ori-xS-LUW" firstAttribute="bottom" secondItem="1U9-Nn-sby" secondAttribute="bottom" id="kUJ-16-tRb"/>
                             <constraint firstItem="wyk-0K-qkw" firstAttribute="bottom" secondItem="IDX-VO-ydo" secondAttribute="bottom" id="mrB-xT-Udz"/>
                             <constraint firstItem="GJd-VC-FZT" firstAttribute="leading" secondItem="4iq-dI-Ib2" secondAttribute="leading" id="nr8-el-SVO"/>
                             <constraint firstItem="IDX-VO-ydo" firstAttribute="top" secondItem="BeV-Al-UqK" secondAttribute="bottom" constant="8" id="qLc-Ut-t0s"/>
@@ -515,12 +533,13 @@
                         <outlet property="label_5" destination="krh-kn-OId" id="PU2-BV-Dgm"/>
                         <outlet property="label_6" destination="hcE-Ze-KXX" id="MUi-Yr-0Y0"/>
                         <outlet property="label_7" destination="1U9-Nn-sby" id="Vgg-xu-yWy"/>
+                        <outlet property="label_Turn" destination="8SE-it-RJ3" id="fgw-6S-njt"/>
                         <outlet property="viewBoard" destination="XJ6-LN-CLd" id="Wzp-9V-1Jd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH1-cc-8pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="654"/>
+            <point key="canvasLocation" x="234.375" y="653.87323943661977"/>
         </scene>
         <!--DevFR Tile View Controller-->
         <scene sceneID="rbs-5C-iNw">

@@ -185,7 +185,7 @@ class FRTouchInteractionView: UIView {
         
         let lastTouch = FRTouch.getTouch(dimension: dimension, viewSize: self.frame.size, location: &location)
         
-        if lastTouch.x >= 0 {
+        if isAvailableTouch {
             _ = FRTouchManager.shared.setLastTouch(touch: lastTouch)
         }
         else {
