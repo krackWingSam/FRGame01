@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EXBinder
 
 public enum FRTileType: Int, CaseIterable {
     case FRType_Sword = 1,
@@ -22,6 +23,11 @@ class FRTile: NSObject {
     
     var axisX       : UInt          = 0
     var axisY       : UInt          = 0
+    var tileLP                      = EXProperty(Int.self)  // Life Point
+    var tileAP                      = EXProperty(Int.self)  // Atack Point
+    
+    var label_LP    : UILabel?
+    var label_AP    : UILabel?
     var type        : FRTileType!
     var imageView   : UIImageView!
     
@@ -44,14 +50,26 @@ class FRTile: NSObject {
     }
     
     
-    class func getRandonTile() -> FRTile {
+    class func getRandomTile() -> FRTile {
         let rawValue = arc4random() % UInt32(FRPreference.shared.tileRange) + 1
         let type = FRTileType(rawValue: Int(rawValue))
         let tile = FRTile(type: type!)
         
+        
+//        tile.tileLP.value = 1
         if tile.type == .FRType_Enemy {
             //TODO: generate life, demage
         }
+        else {
+            
+        }
+        
+        return tile
+    }
+    
+    class func getRandomTile(_ life: Int) -> FRTile {
+        let tile = FRTile.getRandomTile()
+        tile.tileLP.value = life
         
         return tile
     }
@@ -60,7 +78,10 @@ class FRTile: NSObject {
         super.init()
     }
     
+    // MARK: - Public
     public init(type: FRTileType) {
+        super.init()
+        
         self.type = type
         let cellWidth = FRPreference.shared.cellWidth
         let cellHeight = FRPreference.shared.cellHeight
@@ -69,10 +90,72 @@ class FRTile: NSObject {
         imageView.frame.origin.y = CGFloat(axisY) * cellHeight
         
         imageView.image = FRImageManager.shared.getImage(type: type)
+        
+        tileLP.value = 0
+        tileAP.value = 0
+        
+        if type == .FRType_Enemy {
+            initLP()
+            initAP()
+            // test code
+            tileLP.value = 3
+        }
+        if type == .FRType_Sword {
+            initAP()
+            tileAP.value = FRUserInfo.shared.WP.value
+        }
+    }
+    
+    func initAP() {
+        label_AP = UILabel()
+        guard let label_AP = label_AP else { return }
+        
+        label_AP.textColor = UIColor.black
+        label_AP.font = UIFont.systemFont(ofSize: 12)
+        label_AP.frame.size.width = imageView.frame.size.width
+        label_AP.frame.size.height = 10
+        label_AP.frame.origin.x = imageView.frame.size.height - 10 - 5
+        label_AP.frame.origin.y = imageView.frame.size.width - 10 - 5
+        
+        tileAP.bind(userInterface: label_AP, propertyToInterface: { (property, label) in
+            label_AP.text = String(property.value)
+        }) { (property, label) in }
+        imageView.addSubview(label_AP)
+    }
+    
+    func initLP() {
+        label_LP = UILabel()
+        guard let label_LP = label_LP else { return }
+        
+        label_LP.textColor = UIColor.black
+        label_LP.font = UIFont.systemFont(ofSize: 12)
+        label_LP.frame.size.width = imageView.frame.size.width
+        label_LP.frame.size.height = 10
+        label_LP.frame.origin.x = 5
+        label_LP.frame.origin.y = 5
+        
+        tileLP.bind(userInterface: label_LP, propertyToInterface: { (property, label) in
+            label.text = String(property.value)
+        }) { (property, label) in }
+        imageView.addSubview(label_LP)
+    }
+    
+    public func canRemoveTile(_ life: Int) -> Bool {
+        tileLP.value -= life
+        return tileLP.value <= 0 ? true : false
+        
     }
     
     public func removeTile() {
         self.imageView.removeFromSuperview()
+        if label_LP != nil {
+            label_LP!.removeFromSuperview()
+        }
+        if label_AP != nil {
+            label_AP!.removeFromSuperview()
+        }
+        tileAP.releaseAll()
+        tileLP.releaseAll()
     }
     
     // MARK: - override

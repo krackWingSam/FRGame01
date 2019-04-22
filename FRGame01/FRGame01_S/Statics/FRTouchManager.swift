@@ -227,11 +227,21 @@ class FRTouchManager: NSObject {
 //        if checkLastTouch(touch: touch) {       //check valid touch
             // make tile array for remove
         if array_Touches.count > 1 {
-            var removeTiles : [FRTile] = []
+            var tempTiles : [FRTile] = []
             for touch in array_Touches {
                 let dimensionY = Int(FRPreference.shared.axisY - 1)
                 let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
-                removeTiles.append(tile)
+                tempTiles.append(tile)
+            }
+            
+            //check tiles can remove (especially enemy one)
+            let totalAP = calcTotalAtackPoint(tiles: tempTiles)
+            
+            var removeTiles : [FRTile] = []
+            for tile in tempTiles {
+                if tile.canRemoveTile(totalAP) {
+                    removeTiles.append(tile)
+                }
             }
             
             Score.shared.turn.value += 1
@@ -250,6 +260,19 @@ class FRTouchManager: NSObject {
 
             return false
         }
+    }
+    
+    /// 배열 내부 타일의 총 공격력을 계산한다
+    func calcTotalAtackPoint(tiles: [FRTile]) -> Int {
+        var total: Int = FRUserInfo.shared.AP.value
+        
+        for tile in tiles {
+            if tile.type == FRTileType.FRType_Sword {
+                total += FRUserInfo.shared.WP.value
+            }
+        }
+        
+        return total
     }
     
     /// 배열을 초기화 한다.

@@ -78,7 +78,7 @@ class FRTileManager: NSObject {
             
             // create empty tile
             for y in count..<dimensionY.intValue {
-                let tile = FRTile.getRandonTile()
+                let tile = FRTile.getRandomTile()
                 tile.axisX = x.uintValue
                 tile.axisY = y.uintValue
                 tile.imageView.frame = calcTileInitializedRect(tile: tile)
@@ -113,6 +113,7 @@ class FRTileManager: NSObject {
     func removeTile(tiles: [FRTile]) {
         for tile in tiles {
             //TODO: 삭제되기 직전 수행해야 하는 함수를 이곳에서 수행한다
+            
             
             // 사라지는 타일을 Score 에 등록한다
             Score.shared.appendTile(tile)

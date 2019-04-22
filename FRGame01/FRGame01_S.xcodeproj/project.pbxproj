@@ -41,6 +41,7 @@
 		89842A5822262FE200DE70CB /* t_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5122262FE200DE70CB /* t_4.png */; };
 		89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A5C22265F8300DE70CB /* devFRTileViewController.swift */; };
 		89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A6322266DF300DE70CB /* NSObjectExtension.swift */; };
+		89DF38A7226D8EB400497398 /* FRUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF38A6226D8EB400497398 /* FRUserInfo.swift */; };
 		89E1E7DE22672ADD0089D34B /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E1E7DD22672ADD0089D34B /* Score.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		89842A5122262FE200DE70CB /* t_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_4.png; sourceTree = "<group>"; };
 		89842A5C22265F8300DE70CB /* devFRTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devFRTileViewController.swift; sourceTree = "<group>"; };
 		89842A6322266DF300DE70CB /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		89DF38A6226D8EB400497398 /* FRUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRUserInfo.swift; sourceTree = "<group>"; };
 		89E1E7DD22672ADD0089D34B /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		89E1E802226730AF0089D34B /* EXBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EXBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				89E1E7DD22672ADD0089D34B /* Score.swift */,
+				89DF38A6226D8EB400497398 /* FRUserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				89E1E7DE22672ADD0089D34B /* Score.swift in Sources */,
 				897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */,
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
+				89DF38A7226D8EB400497398 /* FRUserInfo.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
 				894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,

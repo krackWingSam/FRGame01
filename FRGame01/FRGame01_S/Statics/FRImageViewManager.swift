@@ -22,8 +22,8 @@ class FRImageViewManager: NSObject {
         let height = FRPreference.shared.cellHeight
         
         let imageView = UIImageView(frame: CGRect(x: -width, y: -height, width: width, height: height))
-        imageView.layer.cornerRadius = width/2
-        imageView.clipsToBounds = true
+//        imageView.layer.cornerRadius = width/2
+//        imageView.clipsToBounds = true
         
         return imageView
     }
