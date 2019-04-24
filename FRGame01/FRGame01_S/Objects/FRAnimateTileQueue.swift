@@ -29,4 +29,40 @@ class FRAnimateTileQueue: NSObject {
             }
         }
     }
+    
+    class func pushAnimation(_ blocks: [FRAnimationBlock], handler:@escaping () -> Void) {
+        var currentAnimations: [FRAnimationBlock] = []
+        var leastAnimations: [FRAnimationBlock] = []
+        var timeInterval: Double = 0.0
+        
+        for i in 0..<blocks.count {
+            let block = blocks[i]
+            if currentAnimations.count == 0 {
+                currentAnimations.append(block)
+                timeInterval = block.animationFlag.rawValue
+                continue
+            }
+            
+            guard let flag = currentAnimations.first?.animationFlag else { continue }
+            if flag == block.animationFlag {
+                currentAnimations.append(block)
+            }
+            else {
+                leastAnimations.append(block)
+            }
+        }
+        
+        for block in currentAnimations {
+            block.doAnimation()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval) {
+            if leastAnimations.count == 0 {
+                handler()
+            }
+            else {
+                self.pushAnimation(leastAnimations, handler: handler)
+            }
+        }
+    }
 }

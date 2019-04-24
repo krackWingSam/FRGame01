@@ -29,7 +29,7 @@ class FRPreference: NSObject {
     var tileAnimationDelay      : CGFloat   = 0.02
     
     // MARK: - test variables
-    var tileRange               : Int       = 7
+    var tileRange               : Int       = 5
     
     
     /// 타일의 너비

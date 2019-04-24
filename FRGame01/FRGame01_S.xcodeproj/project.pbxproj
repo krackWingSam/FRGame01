@@ -10,6 +10,12 @@
 		891CDDB822684378007CC2D1 /* EXBinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E1E802226730AF0089D34B /* EXBinder.framework */; };
 		891CDDB922684378007CC2D1 /* EXBinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89E1E802226730AF0089D34B /* EXBinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A3672223A3A1E00F6A496 /* UILabelExtension.swift */; };
+		894E02F3226E953E00158CA9 /* t_potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F1226E953E00158CA9 /* t_potion.png */; };
+		894E02F4226E953E00158CA9 /* t_shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F2226E953E00158CA9 /* t_shield.png */; };
+		894E02F6226E95F800158CA9 /* t_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F5226E95F800158CA9 /* t_coin.png */; };
+		894E02F8226EE24F00158CA9 /* FRTileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02F7226EE24F00158CA9 /* FRTileFactory.swift */; };
+		894E02FA226EF84C00158CA9 /* FRTileFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02F9226EF84C00158CA9 /* FRTileFunctions.swift */; };
+		894E02FC226EFD9B00158CA9 /* FRAnimationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */; };
 		8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B64F2224FA66002310D1 /* AppDelegate.swift */; };
 		8955B6552224FA66002310D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6532224FA66002310D1 /* Main.storyboard */; };
 		8955B6572224FA67002310D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6562224FA67002310D1 /* Assets.xcassets */; };
@@ -61,6 +67,12 @@
 
 /* Begin PBXFileReference section */
 		894A3672223A3A1E00F6A496 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		894E02F1226E953E00158CA9 /* t_potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_potion.png; sourceTree = "<group>"; };
+		894E02F2226E953E00158CA9 /* t_shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_shield.png; sourceTree = "<group>"; };
+		894E02F5226E95F800158CA9 /* t_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_coin.png; sourceTree = "<group>"; };
+		894E02F7226EE24F00158CA9 /* FRTileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileFactory.swift; sourceTree = "<group>"; };
+		894E02F9226EF84C00158CA9 /* FRTileFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileFunctions.swift; sourceTree = "<group>"; };
+		894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimationBlock.swift; sourceTree = "<group>"; };
 		8955B64C2224FA66002310D1 /* FRGame01_S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRGame01_S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8955B64F2224FA66002310D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8955B6542224FA66002310D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894E02F0226DC7BC00158CA9 /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				89842A3422262A4400DE70CB /* FRTile.swift */,
+				894E02F7226EE24F00158CA9 /* FRTileFactory.swift */,
+				894E02F9226EF84C00158CA9 /* FRTileFunctions.swift */,
+			);
+			path = Tile;
+			sourceTree = "<group>";
+		};
 		8955B6432224FA66002310D1 = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +189,9 @@
 		8955B6632224FA95002310D1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				894E02F0226DC7BC00158CA9 /* Tile */,
 				897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */,
-				89842A3422262A4400DE70CB /* FRTile.swift */,
+				894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */,
 				89842A2522251D7900DE70CB /* FRTouch.swift */,
 			);
 			path = Objects;
@@ -227,6 +250,9 @@
 		89842A4A22262FE200DE70CB /* testing tiles */ = {
 			isa = PBXGroup;
 			children = (
+				894E02F5226E95F800158CA9 /* t_coin.png */,
+				894E02F1226E953E00158CA9 /* t_potion.png */,
+				894E02F2226E953E00158CA9 /* t_shield.png */,
 				897480DA223F978700AFCB60 /* t_sword.png */,
 				897480D8223F972E00AFCB60 /* t_skull.png */,
 				89842A4B22262FE200DE70CB /* t_1.png */,
@@ -335,10 +361,13 @@
 				89842A5822262FE200DE70CB /* t_4.png in Resources */,
 				89842A5522262FE200DE70CB /* t_6.png in Resources */,
 				8955B6572224FA67002310D1 /* Assets.xcassets in Resources */,
+				894E02F6226E95F800158CA9 /* t_coin.png in Resources */,
 				897480D9223F972E00AFCB60 /* t_skull.png in Resources */,
 				89842A5222262FE200DE70CB /* t_1.png in Resources */,
 				8955B6552224FA66002310D1 /* Main.storyboard in Resources */,
 				89842A5422262FE200DE70CB /* t_2.png in Resources */,
+				894E02F3226E953E00158CA9 /* t_potion.png in Resources */,
+				894E02F4226E953E00158CA9 /* t_shield.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894E02FA226EF84C00158CA9 /* FRTileFunctions.swift in Sources */,
 				89842A4822262FA900DE70CB /* FRImageManager.swift in Sources */,
 				89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */,
 				89842A3122261AA500DE70CB /* FRImageViewManager.swift in Sources */,
+				894E02FC226EFD9B00158CA9 /* FRAnimationBlock.swift in Sources */,
 				8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */,
 				89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */,
 				89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */,
@@ -359,6 +390,7 @@
 				896CA49522521807006C0C8A /* FRScore.swift in Sources */,
 				89842A2D2226170D00DE70CB /* UIntExtension.swift in Sources */,
 				8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */,
+				894E02F8226EE24F00158CA9 /* FRTileFactory.swift in Sources */,
 				89842A3522262A4400DE70CB /* FRTile.swift in Sources */,
 				897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */,
 				897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */,

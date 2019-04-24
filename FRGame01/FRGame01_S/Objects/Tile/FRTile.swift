@@ -12,24 +12,37 @@ import EXBinder
 public enum FRTileType: Int, CaseIterable {
     case FRType_Sword = 1,
          FRType_Enemy,
-         FRType_Test_3,
-         FRType_Test_4,
-         FRType_Test_5,
+         FRType_Shield,
+         FRType_Potion,
+         FRType_Coin,
          FRType_Test_6,
          FRType_Test_7
 }
 
 class FRTile: NSObject {
     
+    typealias Closure_TurnOverAction = (FRTile) -> Void
+    typealias Closure_TileWillDisappearAction = (FRTile) -> Void
+    typealias Closure_TileWillAppearAction = (FRTile) -> Void
+    
     var axisX       : UInt          = 0
     var axisY       : UInt          = 0
-    var tileLP                      = EXProperty(Int.self)  // Life Point
-    var tileAP                      = EXProperty(Int.self)  // Atack Point
+    
+    // Life Point.
+    var tileLP                      = EXProperty(Int.self)
+    
+    // Property Point.
+    // property can be any value. example, attack or healing or shield ...
+    var tilePP                      = EXProperty(Int.self)
     
     var label_LP    : UILabel?
     var label_AP    : UILabel?
     var type        : FRTileType!
     var imageView   : UIImageView!
+    
+    var tileWillAppear: Closure_TileWillAppearAction?
+    var tileWillDisappear: Closure_TileWillDisappearAction?
+    var tileTurnOver: Closure_TileWillAppearAction?
     
     var frame       : CGRect {
         get {
@@ -50,34 +63,6 @@ class FRTile: NSObject {
     }
     
     
-    class func getRandomTile() -> FRTile {
-        let rawValue = arc4random() % UInt32(FRPreference.shared.tileRange) + 1
-        let type = FRTileType(rawValue: Int(rawValue))
-        let tile = FRTile(type: type!)
-        
-        
-//        tile.tileLP.value = 1
-        if tile.type == .FRType_Enemy {
-            //TODO: generate life, demage
-        }
-        else {
-            
-        }
-        
-        return tile
-    }
-    
-    class func getRandomTile(_ life: Int) -> FRTile {
-        let tile = FRTile.getRandomTile()
-        tile.tileLP.value = life
-        
-        return tile
-    }
-
-    override init() {
-        super.init()
-    }
-    
     // MARK: - Public
     public init(type: FRTileType) {
         super.init()
@@ -92,7 +77,7 @@ class FRTile: NSObject {
         imageView.image = FRImageManager.shared.getImage(type: type)
         
         tileLP.value = 0
-        tileAP.value = 0
+        tilePP.value = 0
         
         if type == .FRType_Enemy {
             initLP()
@@ -102,7 +87,7 @@ class FRTile: NSObject {
         }
         if type == .FRType_Sword {
             initAP()
-            tileAP.value = FRUserInfo.shared.WP.value
+            tilePP.value = FRUserInfo.shared.WP.value
         }
     }
     
@@ -117,7 +102,7 @@ class FRTile: NSObject {
         label_AP.frame.origin.x = imageView.frame.size.height - 10 - 5
         label_AP.frame.origin.y = imageView.frame.size.width - 10 - 5
         
-        tileAP.bind(userInterface: label_AP, propertyToInterface: { (property, label) in
+        tilePP.bind(userInterface: label_AP, propertyToInterface: { (property, label) in
             label_AP.text = String(property.value)
         }) { (property, label) in }
         imageView.addSubview(label_AP)
@@ -143,7 +128,6 @@ class FRTile: NSObject {
     public func canRemoveTile(_ life: Int) -> Bool {
         tileLP.value -= life
         return tileLP.value <= 0 ? true : false
-        
     }
     
     public func removeTile() {
@@ -154,7 +138,7 @@ class FRTile: NSObject {
         if label_AP != nil {
             label_AP!.removeFromSuperview()
         }
-        tileAP.releaseAll()
+        tilePP.releaseAll()
         tileLP.releaseAll()
     }
     

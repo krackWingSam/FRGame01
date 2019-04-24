@@ -78,7 +78,7 @@ class FRTileManager: NSObject {
             
             // create empty tile
             for y in count..<dimensionY.intValue {
-                let tile = FRTile.getRandomTile()
+                let tile = FRTileFactory.getRandomTile()
                 tile.axisX = x.uintValue
                 tile.axisY = y.uintValue
                 tile.imageView.frame = calcTileInitializedRect(tile: tile)
@@ -112,9 +112,6 @@ class FRTileManager: NSObject {
     /// 타일을 삭제한다. 타일의 형태에 따라서 삭제하기 전 함수들을 수행한다
     func removeTile(tiles: [FRTile]) {
         for tile in tiles {
-            //TODO: 삭제되기 직전 수행해야 하는 함수를 이곳에서 수행한다
-            
-            
             // 사라지는 타일을 Score 에 등록한다
             Score.shared.appendTile(tile)
             
@@ -128,11 +125,33 @@ class FRTileManager: NSObject {
                 }
                 tileMap[x!].remove(at: index!)
             }
+            
+            //TODO: 삭제되기 직전 수행해야 하는 함수를 이곳에서 수행한다
+            guard let disappearAction = tile.tileWillDisappear else { continue }
+            disappearAction(tile)
         }
+        
+        // call referesh board(turn over) out of this function
+    }
+    
+    /// Turn over function
+    func turnOver() {
+        // checking tile in the board, do some functions
+        for yArray in tileMap {
+            for tile in yArray {
+                guard let turnOver = tile.tileTurnOver else { continue }
+                turnOver(tile)
+            }
+        }
+        
+        // TODO: do stored function in array
+        
+        // after turn over function, fill the board
         fillTileMap()
         refreshTilePosition()
         sendNotification()
     }
+    
     
     // MARK: - Notification
     func sendNotification() {

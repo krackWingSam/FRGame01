@@ -43,13 +43,13 @@ class Score: EXModel {
         case .FRType_Enemy?:
             tile02.value += 1
             break
-        case .FRType_Test_3?:
+        case .FRType_Shield?:
             tile03.value += 1
             break
-        case .FRType_Test_4?:
+        case .FRType_Potion?:
             tile04.value += 1
             break
-        case .FRType_Test_5?:
+        case .FRType_Coin?:
             tile05.value += 1
             break
         case .FRType_Test_6?:

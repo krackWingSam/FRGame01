@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import EXBinder
 
 class devTotalTestViewController: UIViewController {
     
     @IBOutlet weak var viewBoard        : FRBoardView!
-    @IBOutlet weak var label_1          : UILabel!
-    @IBOutlet weak var label_2          : UILabel!
-    @IBOutlet weak var label_3          : UILabel!
-    @IBOutlet weak var label_4          : UILabel!
-    @IBOutlet weak var label_5          : UILabel!
-    @IBOutlet weak var label_6          : UILabel!
-    @IBOutlet weak var label_7          : UILabel!
-    @IBOutlet weak var label_Turn       : UILabel!
+    @IBOutlet weak var label_LifeCurrent    : UILabel!
+    @IBOutlet weak var label_LifeFull       : UILabel!
+    @IBOutlet weak var label_ShieldCurrent  : UILabel!
+    @IBOutlet weak var label_SheildFull     : UILabel!
+    @IBOutlet weak var label_Coin           : UILabel!
+    @IBOutlet weak var label_AP             : UILabel!
+    @IBOutlet weak var label_WP             : UILabel!
+    
+    @IBOutlet weak var label_Turn           : UILabel!
     
 
     override func viewDidLoad() {
@@ -58,47 +60,35 @@ class devTotalTestViewController: UIViewController {
     }
     
     // MARK: - UI Bind
+    var UIBindClosure: (EXProperty<Int>, UILabel) -> Void = { (property: EXProperty<Int>, label: UILabel) -> Void in
+        label.text = String(property.value)
+    }
+    
+    var UIBindClosure_Empty:(EXProperty<Int>, UILabel) -> Void = { (property: EXProperty<Int>, label: UILabel) -> Void in }
+    
     func bindUI() {
-        Score.shared.tile01.bind(userInterface: label_1, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
+        FRUserInfo.shared.lifeFull.bind(userInterface: label_LifeFull, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
+        FRUserInfo.shared.life.bind(userInterface: label_LifeCurrent, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
         
-        Score.shared.tile02.bind(userInterface: label_2, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
+        FRUserInfo.shared.ShieldFull.bind(userInterface: label_SheildFull, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
+        FRUserInfo.shared.Shield.bind(userInterface: label_ShieldCurrent, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
         
-        Score.shared.tile03.bind(userInterface: label_3, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
+        FRUserInfo.shared.coin.bind(userInterface: label_Coin, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
+        Score.shared.turn.bind(userInterface: label_Turn, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
         
-        Score.shared.tile04.bind(userInterface: label_4, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
-        
-        Score.shared.tile05.bind(userInterface: label_5, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
-        
-        Score.shared.tile06.bind(userInterface: label_6, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
-        
-        Score.shared.tile07.bind(userInterface: label_7, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
-        
-        Score.shared.turn.bind(userInterface: label_Turn, propertyToInterface: { (property, label) in
-            label?.text = String(format: "%d", property.value)
-        }) { (property, label) in }
+        FRUserInfo.shared.AP.bind(userInterface: label_AP, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
+        FRUserInfo.shared.WP.bind(userInterface: label_WP, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)
     }
     
     func releaseUI() {
-        Score.shared.tile01.release(userInterface: label_1)
-        Score.shared.tile02.release(userInterface: label_2)
-        Score.shared.tile03.release(userInterface: label_3)
-        Score.shared.tile04.release(userInterface: label_4)
-        Score.shared.tile05.release(userInterface: label_5)
-        Score.shared.tile06.release(userInterface: label_6)
-        Score.shared.tile07.release(userInterface: label_7)
+        FRUserInfo.shared.lifeFull.release(userInterface: label_LifeFull)
+        FRUserInfo.shared.life.release(userInterface: label_LifeCurrent)
+        FRUserInfo.shared.ShieldFull.release(userInterface: label_SheildFull)
+        FRUserInfo.shared.Shield.release(userInterface: label_ShieldCurrent)
+        
+        FRUserInfo.shared.coin.release(userInterface: label_Coin)
+        Score.shared.turn.release(userInterface: label_Turn)
+        FRUserInfo.shared.AP.release(userInterface: label_AP)
+        FRUserInfo.shared.WP.release(userInterface: label_WP)
     }
 }

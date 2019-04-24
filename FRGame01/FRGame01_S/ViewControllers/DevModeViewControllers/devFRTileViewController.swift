@@ -14,7 +14,7 @@ class devFRTileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let tile = FRTile.init(type: FRTileType.FRType_Test_3)
+        let tile = FRTile.init(type: FRTileType.FRType_Shield)
         tile.imageView.frame = CGRect(x: 30, y: 130, width: 50, height: 50)
         self.view.addSubview(tile.imageView)
         
