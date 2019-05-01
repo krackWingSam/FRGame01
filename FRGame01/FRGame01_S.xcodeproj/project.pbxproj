@@ -23,12 +23,14 @@
 		8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6652224FAD9002310D1 /* DevMode.storyboard */; };
 		8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */; };
 		8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B66A2224FC78002310D1 /* FRPreference.swift */; };
+		896827C422782F8400629976 /* FRLevelDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896827C322782F8400629976 /* FRLevelDesign.swift */; };
+		896827C62278467200629976 /* DebugOptions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896827C52278467200629976 /* DebugOptions.storyboard */; };
+		896827C9227846C000629976 /* DebugOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896827C8227846C000629976 /* DebugOptionViewController.swift */; };
 		896CA49522521807006C0C8A /* FRScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CA49422521807006C0C8A /* FRScore.swift */; };
 		897480D9223F972E00AFCB60 /* t_skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480D8223F972E00AFCB60 /* t_skull.png */; };
 		897480DB223F978700AFCB60 /* t_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480DA223F978700AFCB60 /* t_sword.png */; };
 		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
 		897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */; };
-		897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE1802227B9DE00023404 /* devPreferenceViewController.swift */; };
 		89842A2622251D7900DE70CB /* FRTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2522251D7900DE70CB /* FRTouch.swift */; };
 		89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2822253C3300DE70CB /* FRTouchManager.swift */; };
 		89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2A222613C200DE70CB /* FRBoardView.swift */; };
@@ -47,6 +49,9 @@
 		89842A5822262FE200DE70CB /* t_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 89842A5122262FE200DE70CB /* t_4.png */; };
 		89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A5C22265F8300DE70CB /* devFRTileViewController.swift */; };
 		89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A6322266DF300DE70CB /* NSObjectExtension.swift */; };
+		8993FD272279973900D5B1E6 /* DebugPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993FD262279973900D5B1E6 /* DebugPreferenceViewController.swift */; };
+		8993FD292279980B00D5B1E6 /* DebugAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993FD282279980B00D5B1E6 /* DebugAnimationViewController.swift */; };
+		8993FD2B2279981800D5B1E6 /* DebugLevelDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993FD2A2279981800D5B1E6 /* DebugLevelDesignViewController.swift */; };
 		89DF38A7226D8EB400497398 /* FRUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF38A6226D8EB400497398 /* FRUserInfo.swift */; };
 		89E1E7DE22672ADD0089D34B /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E1E7DD22672ADD0089D34B /* Score.swift */; };
 /* End PBXBuildFile section */
@@ -82,12 +87,14 @@
 		8955B6652224FAD9002310D1 /* DevMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevMode.storyboard; sourceTree = "<group>"; };
 		8955B6682224FBB5002310D1 /* FRTouchInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchInteractionView.swift; sourceTree = "<group>"; };
 		8955B66A2224FC78002310D1 /* FRPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPreference.swift; sourceTree = "<group>"; };
+		896827C322782F8400629976 /* FRLevelDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRLevelDesign.swift; sourceTree = "<group>"; };
+		896827C52278467200629976 /* DebugOptions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugOptions.storyboard; sourceTree = "<group>"; };
+		896827C8227846C000629976 /* DebugOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugOptionViewController.swift; sourceTree = "<group>"; };
 		896CA49422521807006C0C8A /* FRScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRScore.swift; sourceTree = "<group>"; };
 		897480D8223F972E00AFCB60 /* t_skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_skull.png; sourceTree = "<group>"; };
 		897480DA223F978700AFCB60 /* t_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_sword.png; sourceTree = "<group>"; };
 		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
 		897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devTotalTestViewController.swift; sourceTree = "<group>"; };
-		897AE1802227B9DE00023404 /* devPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devPreferenceViewController.swift; sourceTree = "<group>"; };
 		89842A2522251D7900DE70CB /* FRTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouch.swift; sourceTree = "<group>"; };
 		89842A2822253C3300DE70CB /* FRTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchManager.swift; sourceTree = "<group>"; };
 		89842A2A222613C200DE70CB /* FRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRBoardView.swift; sourceTree = "<group>"; };
@@ -106,6 +113,9 @@
 		89842A5122262FE200DE70CB /* t_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_4.png; sourceTree = "<group>"; };
 		89842A5C22265F8300DE70CB /* devFRTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devFRTileViewController.swift; sourceTree = "<group>"; };
 		89842A6322266DF300DE70CB /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		8993FD262279973900D5B1E6 /* DebugPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPreferenceViewController.swift; sourceTree = "<group>"; };
+		8993FD282279980B00D5B1E6 /* DebugAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugAnimationViewController.swift; sourceTree = "<group>"; };
+		8993FD2A2279981800D5B1E6 /* DebugLevelDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLevelDesignViewController.swift; sourceTree = "<group>"; };
 		89DF38A6226D8EB400497398 /* FRUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRUserInfo.swift; sourceTree = "<group>"; };
 		89E1E7DD22672ADD0089D34B /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		89E1E802226730AF0089D34B /* EXBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EXBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +184,7 @@
 				8955B6532224FA66002310D1 /* Main.storyboard */,
 				8955B6582224FA67002310D1 /* LaunchScreen.storyboard */,
 				8955B6652224FAD9002310D1 /* DevMode.storyboard */,
+				896827C52278467200629976 /* DebugOptions.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -225,6 +236,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		896827C7227846AA00629976 /* DebugOptions */ = {
+			isa = PBXGroup;
+			children = (
+				896827C8227846C000629976 /* DebugOptionViewController.swift */,
+				8993FD262279973900D5B1E6 /* DebugPreferenceViewController.swift */,
+				8993FD282279980B00D5B1E6 /* DebugAnimationViewController.swift */,
+				8993FD2A2279981800D5B1E6 /* DebugLevelDesignViewController.swift */,
+			);
+			path = DebugOptions;
+			sourceTree = "<group>";
+		};
 		89842A2722253C0500DE70CB /* Statics */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +256,7 @@
 				89842A3622262A5500DE70CB /* FRTileManager.swift */,
 				89842A4722262FA900DE70CB /* FRImageManager.swift */,
 				896CA49422521807006C0C8A /* FRScore.swift */,
+				896827C322782F8400629976 /* FRLevelDesign.swift */,
 			);
 			path = Statics;
 			sourceTree = "<group>";
@@ -269,9 +292,9 @@
 		89842A5B22265F6700DE70CB /* DevModeViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				896827C7227846AA00629976 /* DebugOptions */,
 				89842A5C22265F8300DE70CB /* devFRTileViewController.swift */,
 				897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */,
-				897AE1802227B9DE00023404 /* devPreferenceViewController.swift */,
 			);
 			path = DevModeViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +349,7 @@
 				TargetAttributes = {
 					8955B64B2224FA66002310D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -352,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896827C62278467200629976 /* DebugOptions.storyboard in Resources */,
 				89842A5622262FE200DE70CB /* t_7.png in Resources */,
 				89842A5322262FE200DE70CB /* t_3.png in Resources */,
 				8955B65A2224FA67002310D1 /* LaunchScreen.storyboard in Resources */,
@@ -383,7 +408,10 @@
 				89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */,
 				89842A3122261AA500DE70CB /* FRImageViewManager.swift in Sources */,
 				894E02FC226EFD9B00158CA9 /* FRAnimationBlock.swift in Sources */,
+				896827C9227846C000629976 /* DebugOptionViewController.swift in Sources */,
 				8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */,
+				8993FD292279980B00D5B1E6 /* DebugAnimationViewController.swift in Sources */,
+				8993FD272279973900D5B1E6 /* DebugPreferenceViewController.swift in Sources */,
 				89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */,
 				89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */,
 				89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */,
@@ -391,15 +419,16 @@
 				89842A2D2226170D00DE70CB /* UIntExtension.swift in Sources */,
 				8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */,
 				894E02F8226EE24F00158CA9 /* FRTileFactory.swift in Sources */,
+				8993FD2B2279981800D5B1E6 /* DebugLevelDesignViewController.swift in Sources */,
 				89842A3522262A4400DE70CB /* FRTile.swift in Sources */,
 				897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */,
 				897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */,
 				89842A2F2226184A00DE70CB /* IntExtension.swift in Sources */,
 				89E1E7DE22672ADD0089D34B /* Score.swift in Sources */,
-				897AE1812227B9DE00023404 /* devPreferenceViewController.swift in Sources */,
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
 				89DF38A7226D8EB400497398 /* FRUserInfo.swift in Sources */,
 				8955B6692224FBB5002310D1 /* FRTouchInteractionView.swift in Sources */,
+				896827C422782F8400629976 /* FRLevelDesign.swift in Sources */,
 				894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */,
 				89842A2622251D7900DE70CB /* FRTouch.swift in Sources */,
 			);
@@ -554,7 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.fermata.FRGame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -573,7 +602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.fermata.FRGame01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -36,7 +36,7 @@ class FRUserInfo: EXModel {
         AP.value = 1
         WP.value = 1
         ShieldFull.value = 30
-        Shield.value = 30
+        Shield.value = 10
         coin.value = 0
     }
     

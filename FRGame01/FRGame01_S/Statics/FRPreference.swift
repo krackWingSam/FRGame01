@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import EXBinder
 
-class FRPreference: NSObject {
+class FRPreference: EXModel {
     // MARK: -
     static let shared = FRPreference()
     
     // MARK: - variables
     /// 디버그모드를 위한 flag
-    var isDebug                 : Bool      = true
+    var isDebug                 = EXProperty(Bool.self)
     
     /// 보드의 X 좌표
-    var axisX                   : UInt      = 7
+    var axisX                   = EXProperty(Int.self)
     
     /// 보드의 Y 좌표
-    var axisY                   : UInt      = 7
+    var axisY                   = EXProperty(Int.self)
+    
+    // MARK: - test variables
+    var tileRange               = EXProperty(Int.self)
     
     /// 타일 애니메이션의 길이
     var tileAnimationDuration   : CGFloat   = 0.1
@@ -28,21 +32,18 @@ class FRPreference: NSObject {
     /// 각 타일 애니메이션의 실행전 delay
     var tileAnimationDelay      : CGFloat   = 0.02
     
-    // MARK: - test variables
-    var tileRange               : Int       = 5
-    
     
     /// 타일의 너비
     var cellWidth   : CGFloat       {
         get {
-            return UIScreen.main.bounds.size.width / axisX.floatValue
+            return UIScreen.main.bounds.size.width / axisX.value.floatValue
         }
     }
     
     /// 타일의 높이
     var cellHeight  : CGFloat       {
         get {
-            return UIScreen.main.bounds.size.width / axisY.floatValue
+            return UIScreen.main.bounds.size.width / axisY.value.floatValue
         }
     }
     
@@ -57,7 +58,13 @@ class FRPreference: NSObject {
     override private init() {
         super.init()
         
-        if isDebug {
+        isDebug.value = false
+        axisX.value = 7
+        axisY.value = 7
+        tileRange.value = 5
+        
+        
+        if isDebug.value {
             print("FRPreference class initialize")
             print(self.description)
         }

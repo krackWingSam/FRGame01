@@ -60,7 +60,7 @@ class FRImageManager: NSObject {
     func getImage(type: FRTileType) -> UIImage {
         let key = dic_Keys[type]!
         guard let image = dic_Images[key] else {
-            if FRPreference.shared.isDebug {
+            if FRPreference.shared.isDebug.value {
                 print(key + ".png does not exist.")
             }
             return UIImage()

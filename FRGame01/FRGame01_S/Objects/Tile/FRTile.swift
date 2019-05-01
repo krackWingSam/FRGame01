@@ -52,7 +52,7 @@ class FRTile: NSObject {
     
     var animatedFrame : CGRect {
         get {
-            let dimensionY = FRPreference.shared.axisY - 1
+            let dimensionY = FRPreference.shared.axisY.value - 1
             let width = FRPreference.shared.cellWidth
             let height = FRPreference.shared.cellHeight
             let x = width * CGFloat(axisX)

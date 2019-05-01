@@ -21,8 +21,8 @@ class FRTouchInteractionView: UIView {
     
 
     func initInterfaceParam() {
-        dimensionX = FRPreference.shared.axisX
-        dimensionY = FRPreference.shared.axisY
+        dimensionX = UInt(FRPreference.shared.axisX.value)
+        dimensionY = UInt(FRPreference.shared.axisY.value)
         
         cellWidth = FRPreference.shared.cellWidth
         cellHeight = FRPreference.shared.cellHeight
@@ -45,7 +45,7 @@ class FRTouchInteractionView: UIView {
         
         initInterfaceParam()
         drawTouchs()
-        if FRPreference.shared.isDebug {
+        if FRPreference.shared.isDebug.value {
             self.drawGrid()
         }
     }

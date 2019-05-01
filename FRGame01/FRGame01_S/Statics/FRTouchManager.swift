@@ -31,11 +31,11 @@ class FRTouchManager: NSObject {
         
         let firstTouch = array_Touches.first
         let x = firstTouch?.x
-        let y = axisY.intValue-1 - (firstTouch?.y)!
+        let y = axisY.value - 1 - (firstTouch?.y)!
         let tile = FRTileManager.shared.tileMap[x!][y]
         
         let currentX = touch.x
-        let currentY = axisY.intValue-1 - touch.y
+        let currentY = axisY.value - 1 - touch.y
         let currentTile = FRTileManager.shared.tileMap[currentX][currentY]
         
         if (tile.type == .FRType_Sword || tile.type == .FRType_Enemy) && (currentTile.type == .FRType_Sword || currentTile.type == .FRType_Enemy) {
@@ -121,7 +121,7 @@ class FRTouchManager: NSObject {
             return false
         }
         
-        if touch.x > FRPreference.shared.axisX || touch.y > FRPreference.shared.axisY {
+        if touch.x > FRPreference.shared.axisX.value || touch.y > FRPreference.shared.axisY.value {
             return false
         }
         
@@ -219,7 +219,7 @@ class FRTouchManager: NSObject {
             array_Touches.append(touch)
         }
         
-        if FRPreference.shared.isDebug {
+        if FRPreference.shared.isDebug.value {
             print("add ended : " + touch.description)
         }
         
@@ -229,7 +229,7 @@ class FRTouchManager: NSObject {
         if array_Touches.count > 1 {
             var tempTiles : [FRTile] = []
             for touch in array_Touches {
-                let dimensionY = Int(FRPreference.shared.axisY - 1)
+                let dimensionY = Int(FRPreference.shared.axisY.value - 1)
                 let tile = FRTileManager.shared.tileMap[touch.x][dimensionY - touch.y]
                 tempTiles.append(tile)
             }
@@ -258,7 +258,7 @@ class FRTouchManager: NSObject {
         else {
             array_Touches.removeAll()
 
-            if FRPreference.shared.isDebug {
+            if FRPreference.shared.isDebug.value {
                 print("last touch failed")
             }
 

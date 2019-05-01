@@ -12,7 +12,7 @@ class FRTileFunctions: NSObject {
     class func atack(_ tile: FRTile) {
         
         let ap: Int = tile.tilePP.value
-        print("tile atack function : %d", tile.tilePP.value)
+        print("tile atack function : %d", tile.tilePP.value!)
         
         //TODO: push animation to animation queue
         

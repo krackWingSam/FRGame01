@@ -17,7 +17,7 @@ class FRScore: NSObject {
     override private init() {
         super.init()
         
-        tileCount = FRPreference.shared.tileRange
+        tileCount = FRPreference.shared.tileRange.value
         tilePoint = []
         for i in 0..<tileCount {
             tilePoint[i] = 0

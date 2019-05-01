@@ -9,7 +9,7 @@
 import UIKit
 
 class FRTileFactory: NSObject {
-    static let tileGravity = [10, 5, 10, 10, 10, 10, 10]
+    static let tileGravity = [10, 8, 10, 10, 10, 10, 10]
     
     // MARK: - private class functions
     class func getTileRange() -> [Range<Int>] {
@@ -25,14 +25,14 @@ class FRTileFactory: NSObject {
     class func generateTileType() -> FRTileType {
         // calc gavity and percentage for each tile
         var totalPosibleRange = 0
-        for i in 0..<FRPreference.shared.tileRange {
+        for i in 0..<FRPreference.shared.tileRange.value {
             totalPosibleRange += tileGravity[i]
         }
         
         var rawValue = Int(arc4random()) % totalPosibleRange
         
         let arrayRange = getTileRange()
-        for i in 0..<FRPreference.shared.tileRange {
+        for i in 0..<FRPreference.shared.tileRange.value {
             let range = arrayRange[i]
             if range.contains(rawValue) {
                 rawValue = i
