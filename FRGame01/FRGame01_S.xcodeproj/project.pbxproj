@@ -25,6 +25,7 @@
 		896827C62278467200629976 /* DebugOptions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896827C52278467200629976 /* DebugOptions.storyboard */; };
 		896827C9227846C000629976 /* DebugOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896827C8227846C000629976 /* DebugOptionViewController.swift */; };
 		896CA49522521807006C0C8A /* FRScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896CA49422521807006C0C8A /* FRScore.swift */; };
+		897133BF22F11316004DE49F /* FRTileAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897133BE22F11316004DE49F /* FRTileAnimationController.swift */; };
 		897480D9223F972E00AFCB60 /* t_skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480D8223F972E00AFCB60 /* t_skull.png */; };
 		897480DB223F978700AFCB60 /* t_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480DA223F978700AFCB60 /* t_sword.png */; };
 		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
@@ -91,6 +92,7 @@
 		896827C52278467200629976 /* DebugOptions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugOptions.storyboard; sourceTree = "<group>"; };
 		896827C8227846C000629976 /* DebugOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugOptionViewController.swift; sourceTree = "<group>"; };
 		896CA49422521807006C0C8A /* FRScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRScore.swift; sourceTree = "<group>"; };
+		897133BE22F11316004DE49F /* FRTileAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileAnimationController.swift; sourceTree = "<group>"; };
 		897480D8223F972E00AFCB60 /* t_skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_skull.png; sourceTree = "<group>"; };
 		897480DA223F978700AFCB60 /* t_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_sword.png; sourceTree = "<group>"; };
 		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8955B64F2224FA66002310D1 /* AppDelegate.swift */,
+				897133BD22F112CF004DE49F /* Animation */,
 				89E1E7DC22672A700089D34B /* Models */,
 				8955B66C2225033A002310D1 /* Extensions */,
 				89842A2722253C0500DE70CB /* Statics */,
@@ -247,6 +250,14 @@
 				8993FD2A2279981800D5B1E6 /* DebugLevelDesignViewController.swift */,
 			);
 			path = DebugOptions;
+			sourceTree = "<group>";
+		};
+		897133BD22F112CF004DE49F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				897133BE22F11316004DE49F /* FRTileAnimationController.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		89842A2722253C0500DE70CB /* Statics */ = {
@@ -414,6 +425,7 @@
 				8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */,
 				8993FD292279980B00D5B1E6 /* DebugAnimationViewController.swift in Sources */,
 				8993FD272279973900D5B1E6 /* DebugPreferenceViewController.swift in Sources */,
+				897133BF22F11316004DE49F /* FRTileAnimationController.swift in Sources */,
 				89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */,
 				89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */,
 				89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */,

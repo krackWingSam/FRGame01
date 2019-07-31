@@ -9,8 +9,6 @@
 import UIKit
 
 class FRBoardView: UIView {
-    let tileAnimationQueue = FRAnimateTileQueue()
-    
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +44,7 @@ class FRBoardView: UIView {
         }
         
         // animation control
-        FRAnimateTileQueue.pushTilesInAnimationQueue(tiles: tiles)
+        FRTileAnimationController.pushTilesInAnimationQueue(tiles: tiles)
     }
     
     
