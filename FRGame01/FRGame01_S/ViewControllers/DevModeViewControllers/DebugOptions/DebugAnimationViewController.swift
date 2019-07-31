@@ -2,7 +2,7 @@
 //  DebugAnimationViewController.swift
 //  FRGame01_S
 //
-//  Created by exs-mobile 강상우 on 01/05/2019.
+//  Created by Fermata 강상우 on 01/05/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 

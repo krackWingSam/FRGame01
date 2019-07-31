@@ -2,26 +2,26 @@
 //  FRUserInfo.swift
 //  FRGame01_S
 //
-//  Created by exs-mobile 강상우 on 22/04/2019.
+//  Created by Fermata 강상우 on 22/04/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
 import UIKit
-import EXBinder
+import FRBinder
 
-class FRUserInfo: EXModel {
+class FRUserInfo: FRModel {
     static let shared = FRUserInfo()
     
-    let lifeFull    = EXProperty(Int.self)
-    let life        = EXProperty(Int.self)      // Life Point
+    let lifeFull    = FRProperty(Int.self)
+    let life        = FRProperty(Int.self)      // Life Point
     
-    let Shield      = EXProperty(Int.self)
-    let ShieldFull  = EXProperty(Int.self)      // Shield Point
+    let Shield      = FRProperty(Int.self)
+    let ShieldFull  = FRProperty(Int.self)      // Shield Point
     
-    let AP          = EXProperty(Int.self)      // Atack Point
-    let WP          = EXProperty(Int.self)      // Weapon Point
+    let AP          = FRProperty(Int.self)      // Atack Point
+    let WP          = FRProperty(Int.self)      // Weapon Point
     
-    let coin        = EXProperty(Int.self)      // Coin
+    let coin        = FRProperty(Int.self)      // Coin
     
     
     override init() {

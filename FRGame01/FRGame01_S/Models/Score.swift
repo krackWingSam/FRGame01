@@ -2,24 +2,24 @@
 //  Score.swift
 //  FRGame01_S
 //
-//  Created by exs-mobile 강상우 on 17/04/2019.
+//  Created by Fermata 강상우 on 17/04/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
 import UIKit
-import EXBinder
+import FRBinder
 
-class Score: EXModel {
+class Score: FRModel {
     static let shared = Score()
     
-    let tile01 = EXProperty(Int.self)
-    let tile02 = EXProperty(Int.self)
-    let tile03 = EXProperty(Int.self)
-    let tile04 = EXProperty(Int.self)
-    let tile05 = EXProperty(Int.self)
-    let tile06 = EXProperty(Int.self)
-    let tile07 = EXProperty(Int.self)
-    let turn   = EXProperty(Int.self)
+    let tile01 = FRProperty(Int.self)
+    let tile02 = FRProperty(Int.self)
+    let tile03 = FRProperty(Int.self)
+    let tile04 = FRProperty(Int.self)
+    let tile05 = FRProperty(Int.self)
+    let tile06 = FRProperty(Int.self)
+    let tile07 = FRProperty(Int.self)
+    let turn   = FRProperty(Int.self)
     
     override init() {
         super.init()

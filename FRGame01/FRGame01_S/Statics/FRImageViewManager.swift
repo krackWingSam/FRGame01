@@ -53,4 +53,9 @@ class FRImageViewManager: NSObject {
         
         return imageView!
     }
+    
+    /// 이미지 뷰 배열의 초기화. 모든 이미지 뷰를 제거
+    func clearImageViewArray() {
+        array_ImageView.removeAll()
+    }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EXBinder
+import FRBinder
 
 public enum FRTileType: Int, CaseIterable {
     case FRType_Sword = 1,
@@ -29,11 +29,11 @@ class FRTile: NSObject {
     var axisY       : UInt          = 0
     
     // Life Point.
-    var tileLP                      = EXProperty(Int.self)
+    var tileLP                      = FRProperty(Int.self)
     
     // Property Point.
     // property can be any value. example, attack or healing or shield ...
-    var tilePP                      = EXProperty(Int.self)
+    var tilePP                      = FRProperty(Int.self)
     
     var label_LP    : UILabel?
     var label_AP    : UILabel?
@@ -132,6 +132,7 @@ class FRTile: NSObject {
     
     public func removeTile() {
         self.imageView.removeFromSuperview()
+        self.imageView = nil
         if label_LP != nil {
             label_LP!.removeFromSuperview()
         }

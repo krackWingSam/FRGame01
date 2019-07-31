@@ -5,6 +5,6 @@
       location = "group:FRGame01/FRGame01_S.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../git/EXBinder/EXBinder/EXBinder.xcodeproj">
+      location = "group:../FRBinder/FRBinder/FRBinder.xcodeproj">
    </FileRef>
 </Workspace>

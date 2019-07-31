@@ -26,6 +26,7 @@ class FRBoardView: UIView {
 
     // add tile in self
     func initTileMap() {
+        FRImageViewManager.shared.clearImageViewArray()
         for view in self.subviews {
             view.removeFromSuperview()
         }

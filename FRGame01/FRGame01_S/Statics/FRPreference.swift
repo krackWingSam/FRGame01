@@ -7,24 +7,24 @@
 //
 
 import UIKit
-import EXBinder
+import FRBinder
 
-class FRPreference: EXModel {
+class FRPreference: FRModel {
     // MARK: -
     static let shared = FRPreference()
     
     // MARK: - variables
     /// 디버그모드를 위한 flag
-    var isDebug                 = EXProperty(Bool.self)
+    var isDebug                 = FRProperty(Bool.self)
     
     /// 보드의 X 좌표
-    var axisX                   = EXProperty(Int.self)
+    var axisX                   = FRProperty(Int.self)
     
     /// 보드의 Y 좌표
-    var axisY                   = EXProperty(Int.self)
+    var axisY                   = FRProperty(Int.self)
     
     // MARK: - test variables
-    var tileRange               = EXProperty(Int.self)
+    var tileRange               = FRProperty(Int.self)
     
     /// 타일 애니메이션의 길이
     var tileAnimationDuration   : CGFloat   = 0.1

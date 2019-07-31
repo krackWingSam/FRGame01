@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		891CDDB822684378007CC2D1 /* EXBinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E1E802226730AF0089D34B /* EXBinder.framework */; };
-		891CDDB922684378007CC2D1 /* EXBinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89E1E802226730AF0089D34B /* EXBinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		894A3673223A3A1E00F6A496 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A3672223A3A1E00F6A496 /* UILabelExtension.swift */; };
 		894E02F3226E953E00158CA9 /* t_potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F1226E953E00158CA9 /* t_potion.png */; };
 		894E02F4226E953E00158CA9 /* t_shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F2226E953E00158CA9 /* t_shield.png */; };
@@ -31,6 +29,8 @@
 		897480DB223F978700AFCB60 /* t_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480DA223F978700AFCB60 /* t_sword.png */; };
 		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
 		897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */; };
+		8981E2D722D434BA00E2EFE5 /* FRBinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E2D622D434BA00E2EFE5 /* FRBinder.framework */; };
+		8981E2D822D434BA00E2EFE5 /* FRBinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E2D622D434BA00E2EFE5 /* FRBinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89842A2622251D7900DE70CB /* FRTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2522251D7900DE70CB /* FRTouch.swift */; };
 		89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2822253C3300DE70CB /* FRTouchManager.swift */; };
 		89842A2B222613C200DE70CB /* FRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89842A2A222613C200DE70CB /* FRBoardView.swift */; };
@@ -57,13 +57,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		891CDDBA22684378007CC2D1 /* Embed Frameworks */ = {
+		8981E2D922D434BA00E2EFE5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				891CDDB922684378007CC2D1 /* EXBinder.framework in Embed Frameworks */,
+				8981E2D822D434BA00E2EFE5 /* FRBinder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +95,7 @@
 		897480DA223F978700AFCB60 /* t_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_sword.png; sourceTree = "<group>"; };
 		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
 		897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devTotalTestViewController.swift; sourceTree = "<group>"; };
+		8981E2D622D434BA00E2EFE5 /* FRBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FRBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89842A2522251D7900DE70CB /* FRTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouch.swift; sourceTree = "<group>"; };
 		89842A2822253C3300DE70CB /* FRTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouchManager.swift; sourceTree = "<group>"; };
 		89842A2A222613C200DE70CB /* FRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRBoardView.swift; sourceTree = "<group>"; };
@@ -126,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891CDDB822684378007CC2D1 /* EXBinder.framework in Frameworks */,
+				8981E2D722D434BA00E2EFE5 /* FRBinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +147,7 @@
 		8955B6432224FA66002310D1 = {
 			isa = PBXGroup;
 			children = (
+				8981E2D622D434BA00E2EFE5 /* FRBinder.framework */,
 				8955B64E2224FA66002310D1 /* FRGame01_S */,
 				8955B64D2224FA66002310D1 /* Products */,
 				89E1E801226730AF0089D34B /* Frameworks */,
@@ -326,7 +328,7 @@
 				8955B6482224FA66002310D1 /* Sources */,
 				8955B6492224FA66002310D1 /* Frameworks */,
 				8955B64A2224FA66002310D1 /* Resources */,
-				891CDDBA22684378007CC2D1 /* Embed Frameworks */,
+				8981E2D922D434BA00E2EFE5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

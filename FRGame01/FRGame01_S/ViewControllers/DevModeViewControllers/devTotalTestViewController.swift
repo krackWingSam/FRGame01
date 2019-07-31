@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EXBinder
+import FRBinder
 
 class devTotalTestViewController: UIViewController {
     
@@ -60,11 +60,11 @@ class devTotalTestViewController: UIViewController {
     }
     
     // MARK: - UI Bind
-    var UIBindClosure: (EXProperty<Int>, UILabel) -> Void = { (property: EXProperty<Int>, label: UILabel) -> Void in
+    var UIBindClosure: (FRProperty<Int>, UILabel) -> Void = { (property: FRProperty<Int>, label: UILabel) -> Void in
         label.text = String(property.value)
     }
     
-    var UIBindClosure_Empty:(EXProperty<Int>, UILabel) -> Void = { (property: EXProperty<Int>, label: UILabel) -> Void in }
+    var UIBindClosure_Empty:(FRProperty<Int>, UILabel) -> Void = { (property: FRProperty<Int>, label: UILabel) -> Void in }
     
     func bindUI() {
         FRUserInfo.shared.lifeFull.bind(userInterface: label_LifeFull, propertyToInterface: UIBindClosure, interfaceToProperty: UIBindClosure_Empty)

@@ -89,13 +89,73 @@
                     <view key="view" contentMode="scaleToFill" id="FCf-F0-6sf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COq-HJ-I1j">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="level_design" rowHeight="80" id="Mqw-J1-Ram" customClass="LevelDesignTableViewCell" customModule="FRGame01_S" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mqw-J1-Ram" id="QvO-EJ-hsx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpE-Rl-Jhy">
+                                                    <rect key="frame" x="15" y="15" width="59.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="u9M-zv-qbe">
+                                                    <rect key="frame" x="92.5" y="39" width="214.5" height="31"/>
+                                                    <connections>
+                                                        <action selector="slider_Value:" destination="fM5-a6-uZn" eventType="valueChanged" id="gAT-V4-g8O"/>
+                                                    </connections>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-dB-UOP">
+                                                    <rect key="frame" x="264.5" y="11" width="40.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mlN-dB-UOP" firstAttribute="trailing" secondItem="QvO-EJ-hsx" secondAttribute="trailingMargin" id="1Vc-M1-zVn"/>
+                                                <constraint firstItem="vpE-Rl-Jhy" firstAttribute="top" secondItem="QvO-EJ-hsx" secondAttribute="topMargin" constant="4" id="34Q-xo-uAR"/>
+                                                <constraint firstItem="vpE-Rl-Jhy" firstAttribute="leading" secondItem="QvO-EJ-hsx" secondAttribute="leadingMargin" id="NIN-4A-id1"/>
+                                                <constraint firstItem="u9M-zv-qbe" firstAttribute="leading" secondItem="vpE-Rl-Jhy" secondAttribute="trailing" constant="20" id="Ofg-cl-zdD"/>
+                                                <constraint firstItem="u9M-zv-qbe" firstAttribute="trailing" secondItem="QvO-EJ-hsx" secondAttribute="trailingMargin" id="aU7-UM-jlh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="u9M-zv-qbe" secondAttribute="bottom" id="ao5-xi-tGw"/>
+                                                <constraint firstItem="mlN-dB-UOP" firstAttribute="top" secondItem="QvO-EJ-hsx" secondAttribute="topMargin" id="dgC-gj-DiE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label_Title" destination="vpE-Rl-Jhy" id="n6a-Mq-lQJ"/>
+                                            <outlet property="label_Value" destination="mlN-dB-UOP" id="heO-hq-MEz"/>
+                                            <outlet property="slider_Value" destination="u9M-zv-qbe" id="IhM-sD-edX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0SR-4O-Wh7" id="hAJ-mw-MSm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pGz-km-OWy" firstAttribute="trailing" secondItem="COq-HJ-I1j" secondAttribute="trailing" id="CyX-e4-mbW"/>
+                            <constraint firstItem="COq-HJ-I1j" firstAttribute="top" secondItem="pGz-km-OWy" secondAttribute="top" id="QQF-28-8K5"/>
+                            <constraint firstItem="COq-HJ-I1j" firstAttribute="leading" secondItem="pGz-km-OWy" secondAttribute="leading" id="q5T-E8-hQF"/>
+                            <constraint firstItem="pGz-km-OWy" firstAttribute="bottom" secondItem="COq-HJ-I1j" secondAttribute="bottom" id="xUB-00-Pf4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pGz-km-OWy"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOC-2z-BUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fM5-a6-uZn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="95"/>
+            <point key="canvasLocation" x="2019.375" y="94.014084507042256"/>
         </scene>
         <!--Preference-->
         <scene sceneID="qFJ-Fn-3ms">
