@@ -13,7 +13,6 @@
 		894E02F6226E95F800158CA9 /* t_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 894E02F5226E95F800158CA9 /* t_coin.png */; };
 		894E02F8226EE24F00158CA9 /* FRTileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02F7226EE24F00158CA9 /* FRTileFactory.swift */; };
 		894E02FA226EF84C00158CA9 /* FRTileFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02F9226EF84C00158CA9 /* FRTileFunctions.swift */; };
-		894E02FC226EFD9B00158CA9 /* FRAnimationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */; };
 		8955B6502224FA66002310D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955B64F2224FA66002310D1 /* AppDelegate.swift */; };
 		8955B6552224FA66002310D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6532224FA66002310D1 /* Main.storyboard */; };
 		8955B6572224FA67002310D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8955B6562224FA67002310D1 /* Assets.xcassets */; };
@@ -28,7 +27,6 @@
 		897133BF22F11316004DE49F /* FRTileAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897133BE22F11316004DE49F /* FRTileAnimationController.swift */; };
 		897480D9223F972E00AFCB60 /* t_skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480D8223F972E00AFCB60 /* t_skull.png */; };
 		897480DB223F978700AFCB60 /* t_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 897480DA223F978700AFCB60 /* t_sword.png */; };
-		897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */; };
 		897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */; };
 		8981E2D722D434BA00E2EFE5 /* FRBinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E2D622D434BA00E2EFE5 /* FRBinder.framework */; };
 		8981E2D822D434BA00E2EFE5 /* FRBinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E2D622D434BA00E2EFE5 /* FRBinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -55,6 +53,11 @@
 		8993FD2B2279981800D5B1E6 /* DebugLevelDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993FD2A2279981800D5B1E6 /* DebugLevelDesignViewController.swift */; };
 		89DF38A7226D8EB400497398 /* FRUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DF38A6226D8EB400497398 /* FRUserInfo.swift */; };
 		89E1E7DE22672ADD0089D34B /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E1E7DD22672ADD0089D34B /* Score.swift */; };
+		B0BC83DD23D80E4B004A72DA /* devAnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC83DC23D80E4B004A72DA /* devAnimationTestViewController.swift */; };
+		B0BC83E823D815C7004A72DA /* 07b4ee38681339.576adfb17eb85.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0BC83E523D815C7004A72DA /* 07b4ee38681339.576adfb17eb85.gif */; };
+		B0BC83E923D815C7004A72DA /* 83b5de38681339.576ad00387a4b.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0BC83E623D815C7004A72DA /* 83b5de38681339.576ad00387a4b.gif */; };
+		B0BC83EA23D815C7004A72DA /* fcfcae38681339.576ad5c9a46cc.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0BC83E723D815C7004A72DA /* fcfcae38681339.576ad5c9a46cc.gif */; };
+		B0BC83EE23D82EAE004A72DA /* FRAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC83ED23D82EAE004A72DA /* FRAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,7 +81,6 @@
 		894E02F5226E95F800158CA9 /* t_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_coin.png; sourceTree = "<group>"; };
 		894E02F7226EE24F00158CA9 /* FRTileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileFactory.swift; sourceTree = "<group>"; };
 		894E02F9226EF84C00158CA9 /* FRTileFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileFunctions.swift; sourceTree = "<group>"; };
-		894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimationBlock.swift; sourceTree = "<group>"; };
 		8955B64C2224FA66002310D1 /* FRGame01_S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRGame01_S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8955B64F2224FA66002310D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8955B6542224FA66002310D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,7 +97,6 @@
 		897133BE22F11316004DE49F /* FRTileAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTileAnimationController.swift; sourceTree = "<group>"; };
 		897480D8223F972E00AFCB60 /* t_skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_skull.png; sourceTree = "<group>"; };
 		897480DA223F978700AFCB60 /* t_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t_sword.png; sourceTree = "<group>"; };
-		897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimateTileQueue.swift; sourceTree = "<group>"; };
 		897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devTotalTestViewController.swift; sourceTree = "<group>"; };
 		8981E2D622D434BA00E2EFE5 /* FRBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FRBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89842A2522251D7900DE70CB /* FRTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRTouch.swift; sourceTree = "<group>"; };
@@ -122,6 +123,11 @@
 		89DF38A6226D8EB400497398 /* FRUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRUserInfo.swift; sourceTree = "<group>"; };
 		89E1E7DD22672ADD0089D34B /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		89E1E802226730AF0089D34B /* EXBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EXBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BC83DC23D80E4B004A72DA /* devAnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devAnimationTestViewController.swift; sourceTree = "<group>"; };
+		B0BC83E523D815C7004A72DA /* 07b4ee38681339.576adfb17eb85.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 07b4ee38681339.576adfb17eb85.gif; sourceTree = "<group>"; };
+		B0BC83E623D815C7004A72DA /* 83b5de38681339.576ad00387a4b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 83b5de38681339.576ad00387a4b.gif; sourceTree = "<group>"; };
+		B0BC83E723D815C7004A72DA /* fcfcae38681339.576ad5c9a46cc.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fcfcae38681339.576ad5c9a46cc.gif; sourceTree = "<group>"; };
+		B0BC83ED23D82EAE004A72DA /* FRAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				894E02F0226DC7BC00158CA9 /* Tile */,
-				897AE17C2227952B00023404 /* FRAnimateTileQueue.swift */,
-				894E02FB226EFD9B00158CA9 /* FRAnimationBlock.swift */,
 				89842A2522251D7900DE70CB /* FRTouch.swift */,
+				B0BC83ED23D82EAE004A72DA /* FRAnimation.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 		89842A4922262FE200DE70CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B0BC83E423D815C7004A72DA /* testing gifs */,
 				89842A4A22262FE200DE70CB /* testing tiles */,
 			);
 			name = Images;
@@ -308,6 +314,7 @@
 				896827C7227846AA00629976 /* DebugOptions */,
 				89842A5C22265F8300DE70CB /* devFRTileViewController.swift */,
 				897AE17E2227B4AE00023404 /* devTotalTestViewController.swift */,
+				B0BC83DC23D80E4B004A72DA /* devAnimationTestViewController.swift */,
 			);
 			path = DevModeViewControllers;
 			sourceTree = "<group>";
@@ -327,6 +334,16 @@
 				89E1E802226730AF0089D34B /* EXBinder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0BC83E423D815C7004A72DA /* testing gifs */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC83E523D815C7004A72DA /* 07b4ee38681339.576adfb17eb85.gif */,
+				B0BC83E623D815C7004A72DA /* 83b5de38681339.576ad00387a4b.gif */,
+				B0BC83E723D815C7004A72DA /* fcfcae38681339.576ad5c9a46cc.gif */,
+			);
+			path = "testing gifs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,10 +406,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BC83EA23D815C7004A72DA /* fcfcae38681339.576ad5c9a46cc.gif in Resources */,
+				B0BC83E923D815C7004A72DA /* 83b5de38681339.576ad00387a4b.gif in Resources */,
 				896827C62278467200629976 /* DebugOptions.storyboard in Resources */,
 				89842A5622262FE200DE70CB /* t_7.png in Resources */,
 				89842A5322262FE200DE70CB /* t_3.png in Resources */,
 				8955B65A2224FA67002310D1 /* LaunchScreen.storyboard in Resources */,
+				B0BC83E823D815C7004A72DA /* 07b4ee38681339.576adfb17eb85.gif in Resources */,
 				8955B6662224FAD9002310D1 /* DevMode.storyboard in Resources */,
 				897480DB223F978700AFCB60 /* t_sword.png in Resources */,
 				89842A5722262FE200DE70CB /* t_5.png in Resources */,
@@ -420,11 +440,12 @@
 				89842A4822262FA900DE70CB /* FRImageManager.swift in Sources */,
 				89842A6422266DF300DE70CB /* NSObjectExtension.swift in Sources */,
 				89842A3122261AA500DE70CB /* FRImageViewManager.swift in Sources */,
-				894E02FC226EFD9B00158CA9 /* FRAnimationBlock.swift in Sources */,
+				B0BC83EE23D82EAE004A72DA /* FRAnimation.swift in Sources */,
 				896827C9227846C000629976 /* DebugOptionViewController.swift in Sources */,
 				8955B66B2224FC78002310D1 /* FRPreference.swift in Sources */,
 				8993FD292279980B00D5B1E6 /* DebugAnimationViewController.swift in Sources */,
 				8993FD272279973900D5B1E6 /* DebugPreferenceViewController.swift in Sources */,
+				B0BC83DD23D80E4B004A72DA /* devAnimationTestViewController.swift in Sources */,
 				897133BF22F11316004DE49F /* FRTileAnimationController.swift in Sources */,
 				89842A2922253C3300DE70CB /* FRTouchManager.swift in Sources */,
 				89842A3722262A5500DE70CB /* FRTileManager.swift in Sources */,
@@ -436,7 +457,6 @@
 				8993FD2B2279981800D5B1E6 /* DebugLevelDesignViewController.swift in Sources */,
 				89842A3522262A4400DE70CB /* FRTile.swift in Sources */,
 				897AE17F2227B4AE00023404 /* devTotalTestViewController.swift in Sources */,
-				897AE17D2227952B00023404 /* FRAnimateTileQueue.swift in Sources */,
 				89842A2F2226184A00DE70CB /* IntExtension.swift in Sources */,
 				89E1E7DE22672ADD0089D34B /* Score.swift in Sources */,
 				89842A5D22265F8300DE70CB /* devFRTileViewController.swift in Sources */,
